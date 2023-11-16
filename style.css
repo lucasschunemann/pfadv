@@ -19,7 +19,7 @@ a{
 
 body{
     font-family: 'Poppins', sans-serif;
-    background-color: #131313;
+    background-color: #040404;
 }
 
 nav{
@@ -90,7 +90,6 @@ nav{
 
 .blur{
     position: absolute;
-    box-shadow: 0 0 1000px 50px #581114;
     z-index: -100;
 }
 
@@ -132,10 +131,6 @@ header .image{
     position: relative;
 }
 
-header .image img{
-    border-radius: 20px;
-}
-
 header .image::before{
     content: "o";
     position: absolute;
@@ -153,6 +148,7 @@ header .image::before{
 header .image img{
     max-width: 600px;
     margin: auto;
+    border-radius: 20px;
 }
 
 section .header{
@@ -163,6 +159,16 @@ section .header{
     font-weight: 600;
 }
 
+section .imgquemsomos{
+    display: flex;
+}
+
+.image2 img{
+    max-width: 600px;
+    margin: auto;
+    border-radius: 20px;
+}
+
 .features{
     margin-top: 4rem;
     display: grid;
@@ -171,7 +177,7 @@ section .header{
 }
 
 .features .card{
-    background-color: #27272a;
+    background-color: #1c1c1c;
     padding: 1rem;
     border: 2px solid transparent;
     border-radius: 15px;
@@ -217,7 +223,7 @@ section .header{
 .sub-header{
     max-width: 600px;
     margin: auto;
-    text-align: center;
+    text-align: justify;
     color: #ccc;
     margin-bottom: 6rem;
 }
@@ -231,7 +237,7 @@ section .header{
 
 .pricing .card{
     padding: 3rem 2rem;
-    background-color: #27272a;
+    background-color: #1c1c1c;
     display: flex;
     flex-direction: column;
     border: 2px solid transparent;
