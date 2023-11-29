@@ -29,3 +29,14 @@ link2.addEventListener('click', () => {
 link3.addEventListener('click', () => {
     scrollToElement('.header', 2);
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const faqButtons = document.querySelectorAll('.faq .btn');
+
+    faqButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const content = this.parentElement.querySelector('.content');
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        });
+    });
+});
