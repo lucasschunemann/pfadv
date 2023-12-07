@@ -19,7 +19,7 @@ a {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(10, 10, 10);
 }
 
 nav {
@@ -355,6 +355,75 @@ section .header {
     border-color: #581114;
 }
 
+.feedback{
+    padding: 110px 85px;
+    background-color: #1c1c1c;
+}
+
+.feedback h2{
+    align-items: center;
+}
+
+.feedback h2, .feedback h5{
+    color: #fafafa;
+}
+
+.feedback .customers{
+    margin-top: 50px;
+    display: flex;
+    gap: 40px;
+}
+
+.feedback .customers .item{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.feedback .customers .item .rating{
+    color: #ffffff;
+    font-size: 22px;
+}
+
+.feedback .customers .item:hover{
+    border-color: #581114;
+}
+
+.feedback .customers .item p{
+    line-height: 22px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.feedback .customers .item .user{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.feedback .customers .item .user img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.feedback .customers .item .user h5{
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+
+.feedback .customers .item .user p{
+    font-size: 12px;
+    color: #ffffff;
+}
+
 footer {
     position: relative;
     display: grid;
@@ -434,6 +503,15 @@ footer .column > a:hover {
     .pricing {
         grid-template-columns: repeat(2, 1fr);
     }
+    .feedback .customers{
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: center; 
+    }
+    .feedback .customers .item{
+        width: 48%;
+    }
+
     footer {
         grid-template-columns: 1fr 200px;
     }
@@ -463,5 +541,9 @@ footer .column > a:hover {
         border-radius: 20px;
         margin-right: 0; /* Remove o espaçamento à direita para dispositivos móveis */
     }
+    .feedback .customers .item{
+        width: 100%;
+    }
+
 
 }
