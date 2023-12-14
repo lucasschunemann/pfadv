@@ -19,7 +19,7 @@ a {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: rgb(10, 10, 10);
+    background-color: #0a0a0a;
 }
 
 nav {
@@ -30,15 +30,24 @@ nav {
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
+    background-color: #0d0d0d; /* Cor de fundo para a nav */
+    transition: transform 0.5s ease; /* Animação ao passar o mouse */
 }
 
 .nav-logo {
-    max-width: 100px;
+    max-width: 80px;
+    transition: transform 0.5s ease;
 }
 
 .nav-logo img {
     border-radius: 50px;
+    width: 100%; 
 }
+
+.nav-logo:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
 
 .nav-links {
     list-style: none;
@@ -51,6 +60,11 @@ nav {
     position: relative;
     padding-bottom: 0.75rem;
     color: #fff;
+    transition: color 0.3s ease;
+}
+
+.link a:hover {
+    color: #581114; /* Mudança de cor ao passar o mouse */
 }
 
 .link a::after {
@@ -61,11 +75,11 @@ nav {
     bottom: 0;
     left: 0;
     background-color: #581114;
-    transition: all 0.3s ease;
+    transition: width 0.3s ease;
 }
 
 .link a:hover::after {
-    width: 70%;
+    width: 100%;
 }
 
 .btn {
@@ -75,11 +89,12 @@ nav {
     background-color: #581114;
     border-radius: 5px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .btn:hover {
     background-color: #6b2e31;
+    transform: translateY(-3px);
 }
 
 .container {
@@ -88,9 +103,6 @@ nav {
     padding: 5rem 2rem;
 }
 
-/* ... (seu CSS atual) ... */
-
-/* Estilo para o botão do WhatsApp */
 .whatsapp-btn {
     position: fixed;
     bottom: 20px;
@@ -132,44 +144,41 @@ nav {
     transform: rotate(360deg); /* Girando o ícone no hover */
 }
 
-/* Estilo para a pergunta frequentes */
-.faq-container {
-    max-width: 800px;
-    margin: auto;
-    margin-top: 4rem;
-}
-
-.faq .card {
-    /* Adicione estilos para a pergunta */
-    margin-bottom: 1rem;
-}
-
-.faq .card .content {
-    display: none; /* Inicialmente esconde as respostas */
-}
-
-/* ... (seu CSS atual continua) ... */
-
-.blur {
-    position: absolute;
-    z-index: -100;
-}
-
 header {
     position: relative;
     padding-top: 2rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column-reverse; /* Invertendo a ordem para telas menores */
     align-items: center;
     gap: 2rem;
+    background-color: #1c1c1c; /* Mantendo a cor original */
+    border-radius: 20px;
+}
+
+/* Conteúdo do Header */
+header .content {
+    text-align: center;
+    padding: 1rem;
+    animation: fadeInUp 0.6s ease; /* Animação de entrada */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 header .content h4 {
     margin-bottom: 1rem;
-    color: #ffffff;
+    color: #fff;
     font-size: 2.3rem;
     font-weight: 600;
-    border-bottom: 3px dashed #fff;
+    border-bottom: 3px dashed #fff; /* Estilo de sublinhado */
 }
 
 header .content h1 {
@@ -190,28 +199,52 @@ header .content p {
     color: #ccc;
 }
 
+header .content .btn {
+    font-size: 1rem;
+    color: #fff;
+    background-color: #581114;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+header .content .btn:hover {
+    background-color: #6b2e31;
+    transform: translateY(-3px); /* Efeito de hover */
+}
+
+/* Imagem do Header */
 header .image {
-    position: relative;
-}
-
-header .image::before {
-    content: "o";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 38rem;
-    font-weight: 400;
-    line-height: 20rem;
-    color: #581114;
-    opacity: 0.2;
-    z-index: -100;
-}
-
-header .image img {
     max-width: 600px;
     margin: auto;
     border-radius: 20px;
+    overflow: hidden;
+    animation: fadeIn 0.6s ease; /* Animação de entrada */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 768px) {
+    header {
+        flex-direction: row; /* Mudando para layout em linha para telas maiores */
+        justify-content: space-between;
+    }
+
+    header .content {
+        text-align: left;
+        padding: 0 1rem;
+    }
+
+    header .image {
+        order: 2; /* Posicionando a imagem à direita */
+    }
 }
 
 section .header {
@@ -223,38 +256,66 @@ section .header {
 }
 
 .section-quem-somos {
-    max-width: 800px;
-    margin-bottom: 3rem;
+    max-width: 1200px;
+    margin: 4rem auto 6rem; /* Aumentado o espaçamento inferior para 6rem */
+    padding: 2rem;
+    background-color: #f4f4f4;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.section-quem-somos .header {
+    color: #333;
+    font-size: 2.75rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
 }
 
 .imgquemsomos {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 4rem;
     margin-top: 3rem;
-    margin-bottom: 5rem;
+}
+
+.imgquemsomos .sub-header {
+    color: #e6e6e6;
     text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
 }
 
-.imgquemsomos .header {
-    color: #fff;
-    font-size: 2.25rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
+.imgquemsomos .image2 {
+    border-radius: 15px;
+    overflow: hidden;
 }
 
-.sub-header,
-.section-quem-somos .text-content {
-    max-width: 800px;
-    color: #ccc;
-    text-align: justify;
-    margin-bottom: 3rem;
+.imgquemsomos .image2 img {
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
 }
 
-.image2 img {
-    max-width: 50vw;
-    border-radius: 20px;
-    margin-right: 1rem;
+.imgquemsomos .image2 img:hover {
+    transform: scale(1.03);
+}
+
+@media (min-width: 768px) {
+    .section-quem-somos {
+        flex-direction: row;
+    }
+
+    .imgquemsomos .sub-header {
+        padding-right: 2rem; /* Espaço entre texto e imagem */
+    }
 }
 
 .features {
@@ -473,19 +534,25 @@ section .header {
 
 footer {
     position: relative;
-    display: grid;
-    grid-template-columns: 400px repeat(3, 1fr);
-    gap: 2rem;
+    display: flex; /* Continua como flex para melhor controle do alinhamento */
+    flex-direction: column; /* Mantém a organização em coluna */
+    align-items: flex-start; /* Mantém o alinhamento à esquerda */
+    gap: 1rem; /* Reduzindo o espaço entre os elementos */
+    padding: 1rem; /* Reduzindo o preenchimento interno */
+}
+
+footer .column {
+    max-width: 400px; /* Largura máxima para cada coluna */
 }
 
 footer .column .logo {
     max-width: 100px;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 footer .column p {
     color: var(--color-text-light);
-    margin-bottom: 2rem;
+    margin-bottom: .5rem;
 }
 
 footer .column .socials {
@@ -498,7 +565,7 @@ footer .column .socials a {
     color: var(--color-text-light);
     border: 1px solid var(--color-border);
     padding: 5px 10px;
-    font-size: 1.25rem;
+    font-size: 1rem;
     border-radius: 100%;
     transition: all 0.3s ease;
 }
@@ -512,7 +579,7 @@ footer .column .socials a:focus {
 
 footer .column h4 {
     color: #fff;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-size: 1.2rem;
     font-weight: 500;
 }
@@ -520,7 +587,6 @@ footer .column h4 {
 footer .column > a {
     display: block;
     color: var(--color-text-light);
-    margin-bottom: 1rem;
     transition: all 0.3s ease;
 }
 
@@ -528,6 +594,7 @@ footer .column > a:hover,
 footer .column > a:focus {
     color: var(--color-text-dark);
 }
+
 .copyright {
     max-width: 1200px;
     margin: auto;
@@ -578,6 +645,33 @@ footer .column > a:focus {
     footer {
         grid-template-columns: 1fr 150px;
     }
+
+    @media (max-width: 768px) {
+        .nav-toggle {
+            display: block;
+        }
+    
+        .nav-links {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            display: none;
+            flex-direction: column;
+            background-color: #1c1c1c;
+            padding: 1rem;
+        }
+    
+        .nav-links.active {
+            display: flex;
+        }
+    
+        .link {
+            text-align: center; /* Centraliza os links no modo responsivo */
+            width: 100%; /* Ocupa toda a largura disponível */
+        }
+    }
+    
     .imgquemsomos {
         flex-direction: column; /* Altera a direção do flex para empilhar elementos verticalmente */
         align-items: flex-start; /* Alinha os itens à esquerda */
