@@ -35,7 +35,7 @@
         <li id="link3" class="link"><a href="#">Perguntas Frequentes</a></li>
       </ul>
       <button
-        onclick="window.open('https://api.whatsapp.com/send?phone=554735225124&text=Ol%C3%A1!%20Gostaria%20de%20conversar%20com%20um%20Advogado%20sobre%20minha%20notifica%C3%A7%C3%A3o%20de%20tr%C3%A2nsito');"
+        onclick="return gtag_report_conversion('https://api.whatsapp.com/send?phone=554735225124&text=Ol%C3%A1!%20Gostaria%20de%20conversar%20com%20um%20Advogado%20sobre%20minha%20notifica%C3%A7%C3%A3o%20de%20tr%C3%A2nsito');"
         class="btn"
       >
         Desejo falar com um advogado
@@ -54,7 +54,7 @@
           que seus direitos sejam respeitados.
         </p>
         <button
-          onclick="window.open('https://api.whatsapp.com/send?phone=554735225124&text=Ol%C3%A1!%20Gostaria%20de%20conversar%20com%20um%20Advogado%20sobre%20minha%20notifica%C3%A7%C3%A3o%20de%20tr%C3%A2nsito');"
+          onclick="return gtag_report_conversion('https://api.whatsapp.com/send?phone=554735225124&text=Ol%C3%A1!%20Gostaria%20de%20conversar%20com%20um%20Advogado%20sobre%20minha%20notifica%C3%A7%C3%A3o%20de%20tr%C3%A2nsito');"
           class="btn"
         >
           Desejo falar com um advogado
@@ -69,6 +69,7 @@
       <a
         href="https://api.whatsapp.com/send?phone=554735225124&text=Ol%C3%A1!%20Gostaria%20de%20conversar%20com%20um%20Advogado%20sobre%20minha%20notifica%C3%A7%C3%A3o%20de%20tr%C3%A2nsito"
         target="_blank"
+        onclick="return gtag_report_conversion('https://api.whatsapp.com/send?phone=554735225124&text=Ol%C3%A1!%20Gostaria%20de%20conversar%20com%20um%20Advogado%20sobre%20minha%20notifica%C3%A7%C3%A3o%20de%20tr%C3%A2nsito')"
       >
         <span>Desejo falar com um advogado</span>
       </a>
@@ -440,6 +441,21 @@
       gtag("event", "conversion", {
         send_to: "AW-395923033/ZiSbCILypokZENmc5bwB",
       });
+    </script>
+
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof url != "undefined") {
+            window.location = url;
+          }
+        };
+        gtag("event", "conversion", {
+          send_to: "AW-395923033/ZiSbCILypokZENmc5bwB",
+          event_callback: callback,
+        });
+        return false;
+      }
     </script>
   </body>
 </html>
