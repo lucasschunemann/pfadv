@@ -3,424 +3,716 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FAVICON ===============-->
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css"
+      rel="shortcut icon"
+      href="assets/img/favicon2.png"
+      type="image/x-icon"
     />
+
+    <!--=============== BOXICONS ===============-->
     <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <title>PF Advogados |</title>
-    <link rel="shortcut icon" type="image/png" href="images/favicon.ico" />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <title>Passig & Firmino Advogados</title>
   </head>
-
   <body>
-    <nav>
-      <div class="nav-logo">
-        <a href="#">
-          <img src="images/favicon.jpeg" alt="Logotipo PF Advogados" />
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav__logo">
+          <img
+            src="assets/img/icon.png"
+            alt="Logo Passig & Firmino Advogados"
+            class="nav__logo-img"
+          />
+          Passig & Firmino Advogados
         </a>
-      </div>
 
-      <ul class="nav-links">
-        <li class="link"><a href="#">Home</a></li>
-        <li id="link1" class="link"><a href="#">Nossos Serviços</a></li>
-        <li id="link2" class="link"><a href="#">Quem somos?</a></li>
-        <li id="link3" class="link"><a href="#">Perguntas Frequentes</a></li>
-      </ul>
-      <button
-        onclick="return gtag_report_conversion('https://api.whatsapp.com/send?phone=554735225124&text=Ol%C3%A1!%20Gostaria%20de%20conversar%20com%20um%20Advogado%20sobre%20minha%20notifica%C3%A7%C3%A3o%20de%20tr%C3%A2nsito');"
-        class="btn"
-      >
-        Desejo falar com um advogado
-      </button>
-    </nav>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active-link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="#specialty" class="nav__link">Nossos Serviços</a>
+            </li>
+            <li class="nav__item">
+              <a href="#premium" class="nav__link">Quem somos?</a>
+            </li>
+            <li class="nav__item">
+              <a href="#faq" class="nav__link">Perguntas frequentes</a>
+            </li>
+            <li class="nav__item">
+              <a href="#reviews" class="nav__link">Avaliações</a>
+            </li>
+          </ul>
+          <div class="nav__close" id="nav-close">
+            <i class="bx bx-x" aria-label="Fechar Menu"></i>
+          </div>
+        </div>
 
-    <header class="container">
-      <div class="content">
-        <h4>RECEBEU UMA NOTIFICAÇÃO DE MULTA, SUSPENSÃO OU CASSAÇÃO DE CNH?</h4>
-        <h1>Você<span> não </span>está sozinho.</h1>
-        <p>
-          Receber uma notificação de multa, suspensão ou cassação de CNH tem se
-          tornado cada vez mais comum e pode ser um momento de preocupação e
-          incerteza. Não permita que essa notificação determine o seu futuro. Em
-          vez disso, tome a decisão de proteger os seus interesses e garantir
-          que seus direitos sejam respeitados.
-        </p>
-        <button
-          onclick="return gtag_report_conversion('https://api.whatsapp.com/send?phone=554735225124&text=Ol%C3%A1!%20Gostaria%20de%20conversar%20com%20um%20Advogado%20sobre%20minha%20notifica%C3%A7%C3%A3o%20de%20tr%C3%A2nsito');"
-          class="btn"
-        >
-          Desejo falar com um advogado
-        </button>
-      </div>
-      <div class="image">
-        <img src="images/PF ADV.jfif" alt="Imagem da equipe PF Advogados" />
-      </div>
+        <!-- Toggle button -->
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="bx bx-menu" aria-label="Abrir Menu"></i>
+        </div>
+      </nav>
     </header>
 
-    <div class="whatsapp-btn">
-      <a
-        href="https://api.whatsapp.com/send?phone=554735225124&text=Ol%C3%A1!%20Gostaria%20de%20conversar%20com%20um%20Advogado%20sobre%20minha%20notifica%C3%A7%C3%A3o%20de%20tr%C3%A2nsito"
-        target="_blank"
-        onclick="return gtag_report_conversion('https://api.whatsapp.com/send?phone=554735225124&text=Ol%C3%A1!%20Gostaria%20de%20conversar%20com%20um%20Advogado%20sobre%20minha%20notifica%C3%A7%C3%A3o%20de%20tr%C3%A2nsito')"
-      >
-        <span>Desejo falar com um advogado</span>
-      </a>
-    </div>
+    <!--==================== MAIN ====================-->
+    <main>
+      <!--==================== HOME ====================-->
+      <section class="home grid" id="home">
+        <div class="home__container">
+          <div class="home__content container">
+            <h1 class="home__title">
+              Recebeu notificação de suspensão da sua CNH?<span>?</span>
+            </h1>
+            <p class="home__description">
+              Seja multa, suspensão ou cassação, podemos te ajudar.
+            </p>
+          </div>
+        </div>
 
-    <section class="container">
-      <h2 class="header">COM ESSE SERVIÇO VOCÊ BUSCARÁ</h2>
-      <div class="features">
-        <div class="card">
-          <span class="material-symbols-outlined"> done </span>
-          <h4>Continuidade no seu direito de dirigir</h4>
-          <p>
-            Contestar a notificação permite que você continue dirigindo enquanto
-            o processo legal está em andamento, evitando suspensões imediatas da
-            sua CNH.
-          </p>
-        </div>
-        <div class="card">
-          <span class="material-symbols-outlined"> settings </span>
-          <h4>Manutenção da pontuação Original</h4>
-          <p>
-            Uma defesa bem-sucedida pode resultar na redução do número de pontos
-            acumulados na sua carteira de motorista, evitando futuras
-            suspensões.
-          </p>
-        </div>
-        <div class="card">
-          <span class="material-symbols-outlined"> payments </span>
-          <h4>Economia Financeira</h4>
-          <p>
-            Somente a defesa nesta etapa pode levar à redução ou eliminação de
-            multas, economizando dinheiro a curto e longo prazo.
-          </p>
-        </div>
-        <div class="card">
-          <span class="material-symbols-outlined"> groups </span>
-          <h4>Proteção da Reputação</h4>
-          <p>
-            Evitar uma suspensão ou cassação da CNH ajuda a manter a reputação
-            do motorista e a capacidade de buscar oportunidades de emprego que
-            exijam uma carteira de motorista válida.
-          </p>
-        </div>
-        <div class="card">
-          <span class="material-symbols-outlined"> badge </span>
-          <h4>Prevenção de Impactos Profissionais</h4>
-          <p>
-            Para motoristas profissionais, a defesa é essencial para evitar
-            interrupções na carreira e manter a capacidade de continuar
-            trabalhando.
-          </p>
-        </div>
-        <div class="card">
-          <span class="material-symbols-outlined"> car_rental </span>
-          <h4>Maior Flexibilidade e Conveniência</h4>
-          <p>
-            Ao manter a CNH válida, o motorista pode continuar a dirigir sem as
-            restrições impostas por uma suspensão ou cassação.
-          </p>
-        </div>
-        <div class="card">
-          <span class="material-symbols-outlined"> policy </span>
-          <h4>Conformidade com o Devido Processo Legal</h4>
-          <p>
-            Uma defesa bem-sucedida garante que os direitos do motorista sejam
-            respeitados e que o processo de multa, suspensão ou cassação siga os
-            devidos procedimentos legais.
-          </p>
-        </div>
-        <div class="card">
-          <span class="material-symbols-outlined"> car_crash </span>
-          <h4>Redução de Seguro de Automóvel</h4>
-          <p>
-            Uma CNH válida e um histórico de direção sem infrações graves podem
-            resultar em prêmios mais baixos de seguro de automóvel, economizando
-            dinheiro a longo prazo.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="container">
-      <h2 class="header">QUEM SOMOS?</h2>
-      <section class="imgquemsomos">
-        <p class="sub-header">
-          <br />
-          O escritório Passig & Firmino Advogados possui ampla experiência em
-          PROCESSOS DE SUSPENSÃO E CASSAÇÃO DE CNH, estando sempre comprometido
-          em fornecer serviços jurídicos de alta qualidade aos nossos clientes.
-          Nossa equipe é formada por advogados experientes e dedicados, que
-          trabalham com ética e excelência para atender às necessidades
-          específicas de nossos clientes que sofrem processo de suspensão e
-          cassação de CNH. Entendemos que cada caso é único, e é por isso que
-          nos dedicamos a buscar soluções personalizadas e eficientes para cada
-          um de nossos clientes. Seja qual for sua necessidade legal relacionada
-          ao trânsito, estamos aqui para ajudar!
-        </p>
-        <div class="image2">
-          <img src="images/passigfirmino.png" />
-        </div>
+        <img
+          src="assets/img/homeimage.jpg"
+          alt="Imagem representando notificação de suspensão de CNH"
+          class="home__img"
+        />
       </section>
+    </main>
 
-      <div class="wrapper">
-        <h2 class="header">PERGUNTAS FREQUENTES</h2>
+    <!--==================== ESPECIALTY ====================-->
+    <div class="specialty section container" id="specialty">
+      <div class="specialty__container">
+        <div class="specialty__box">
+          <h2 class="section__title">
+            Advogados especializados no serviço e comprometimento com o cliente.
+          </h2>
 
-        <div class="faq">
-          <button class="accordion">
-            Quais são as opções legais disponíveis para o meu caso?
-            <i class="fa-solid fa-chevron-down"></i>
-          </button>
-          <div class="pannel">
-            <p>
-              As opções legais variam. Dependendo da natureza da notificação que
-              você recebeu, elas podem incluir a contestação da infração,
-              recurso administrativo ou iniciar um processo judicial para anular
-              a notificação e o processo administrativo.
-            </p>
-          </div>
-        </div>
-
-        <div class="faq">
-          <button class="accordion">
-            Por que contratar um advogado para me defender da notificação?
-            <i class="fa-solid fa-chevron-down"></i>
-          </button>
-          <div class="pannel">
-            <p>
-              Ao contratar um advogado que atue em processos de suspensão e
-              cassação de CNH, você terá um aliado dedicado à sua defesa,
-              personalizando a estratégia de acordo com suas circunstâncias
-              únicas. Além disso, o advogado cuidará de toda a papelada e
-              cuidará dos prazos legais. Com isso, você não precisa se preocupar
-              com o recebimento e cumprimento de intimações.
-            </p>
+          <div>
+            <a
+              href="https://api.whatsapp.com/send?phone=554735225124&text=Ol%C3%A1!%20Gostaria%20de%20conversar%20com%20um%20Advogado%20sobre%20minha%20notifica%C3%A7%C3%A3o%20de%20tr%C3%A2nsito"
+              class="button specialty__button whatsapp-specialty-button"
+              target="_blank"
+              id="whatsapp-button"
+            >
+              <i class="bx bxl-whatsapp"></i> Desejo falar com um advogado
+            </a>
           </div>
         </div>
 
-        <div class="faq">
-          <button class="accordion">
-            Quais são as chances de sucesso na minha defesa?
-            <i class="fa-solid fa-chevron-down"></i>
-          </button>
-          <div class="pannel">
-            <p>
-              As possibilidades de reverter a suspensão da CNH podem variar,
-              dependendo de diversos elementos, incluindo as circunstâncias da
-              infração, a qualidade da defesa apresentada e a avaliação do órgão
-              responsável. É importante ressaltar que não podemos garantir um
-              sucesso absoluto, pois cada caso é único e as decisões finais são
-              tomadas pelo órgão administrativo competente ou pelo Poder
-              Judiciário.
-            </p>
-          </div>
-        </div>
+        <div class="specialty__category">
+          <div class="specialty__group specialty__line">
+            <img
+              src="assets/img/1.png"
+              alt="Imagem representando continuidade no seu direito de dirigir"
+              class="specialty__img"
+            />
 
-        <div class="faq">
-          <button class="accordion">
-            O que acontece se eu não tomar uma medida imediatamente?
-            <i class="fa-solid fa-chevron-down"></i>
-          </button>
-          <div class="pannel">
-            <p>
-              Não tomar medidas imediatas pode resultar em consequências mais
-              graves, como a suspensão ou cassação efetiva da CNH. Portanto, é
-              fundamental agir rapidamente e evitar maiores transtornos.
+            <h3 class="specialty__title">
+              Continuidade no seu direito de dirigir
+            </h3>
+            <p class="specialty__description">
+              Contestar a notificação permite que você continue dirigindo
+              enquanto o processo legal está em andamento, evitando suspensões
+              imediatas da sua CNH.
             </p>
           </div>
-        </div>
 
-        <div class="faq">
-          <button class="accordion">
-            Minha CNH foi suspensa/cassada por excesso de pontos, é possível
-            resolver?
-            <i class="fa-solid fa-chevron-down"></i>
-          </button>
-          <div class="pannel">
-            <p>
-              Sim, em muitos casos é possível resolver a suspensão ou cassação
-              da CNH por excesso de pontos, geralmente por meio de recursos ou
-              outras medidas administrativas e/ou judiciais.
-            </p>
-          </div>
-        </div>
+          <div class="specialty__group specialty__line">
+            <img
+              src="assets/img/2.png"
+              alt="Imagem representando manutenção da pontuação original"
+              class="specialty__img"
+            />
 
-        <div class="faq">
-          <button class="accordion">
-            Não apresentei defesa ou recurso em nenhum momento nas multas
-            aplicadas. Vocês ainda podem me ajudar?
-            <i class="fa-solid fa-chevron-down"></i>
-          </button>
-          <div class="pannel">
-            <p>
-              Sim, mesmo que você não tenha apresentado defesa ou recurso
-              anteriormente, é possível tomar medidas neste momento que possam
-              te ajudar a proteger os seus direitos.
+            <h3 class="specialty__title">Manutenção da pontuação original</h3>
+            <p class="specialty__description">
+              Uma defesa bem-sucedida pode resultar na redução do número de
+              pontos acumulados na sua carteira de motorista, evitando futuras
+              suspensões.
             </p>
           </div>
-        </div>
-        <div class="faq">
-          <button class="accordion">
-            Estou com minha CNH bloqueada por excesso de pontos, mas algumas das
-            multas não fui eu que cometi. Posso fazer algo mesmo que tenha
-            perdido o prazo de indicação de condutor ao DETRAN?
-            <i class="fa-solid fa-chevron-down"></i>
-          </button>
-          <div class="pannel">
-            <p>
-              Se você perdeu o prazo para indicar o real condutor na via
-              administrativa, ainda é possível fazê-lo por meio da via judicial.
-              Fale conosco caso tenha dúvidas sobre o seu direito.
-            </p>
-          </div>
-        </div>
-        <div class="faq">
-          <button class="accordion">
-            Já estou cumprindo a penalidade da suspensão da CNH, há algo para
-            agilizar o processo de reaver meu direito de dirigir?
-            <i class="fa-solid fa-chevron-down"></i>
-          </button>
-          <div class="pannel">
-            <p>
-              Sim, em alguns casos, é possível explorar opções para reduzir o
-              período de suspensão, acelerar o processo de reabilitação da CNH
-              ou até mesmo para reaver imediatamente o seu direito de dirigir.
-            </p>
-          </div>
-        </div>
-        <div class="faq">
-          <button class="accordion">
-            Quais são os prazos para recorrer após receber uma notificação de
-            suspensão ou cassação?
-            <i class="fa-solid fa-chevron-down"></i>
-          </button>
-          <div class="pannel">
-            <p>
-              Os prazos podem variar de acordo com a legislação local, mas é
-              crucial tomar medidas dentro de um período específico após receber
-              a notificação. Em caso de dúvidas, procure um advogado
-              imediatamente.
-            </p>
-          </div>
-        </div>
-        <div class="faq">
-          <button class="accordion">
-            Posso recorrer da suspensão da CNH mesmo se tiver cometido a
-            infração?
-            <i class="fa-solid fa-chevron-down"></i>
-          </button>
-          <div class="pannel">
-            <p>
-              Sim, mesmo se você cometeu a infração, ainda pode recorrer da
-              suspensão da CNH. A defesa para o seu caso serve para que o órgão
-              de trânsito não cometa ilegalidades e para que a sua infração seja
-              imposta de forma correta.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <div class="feedback" id="feedback">
-      <h2>Feedback de Clientes | Melhores avaliações do Google</h2>
-      <div class="customers">
-        <div class="item">
-          <div class="rating">
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
+          <div class="specialty__group">
+            <img
+              src="assets/img/3.png"
+              alt="Imagem representando economia financeira"
+              class="specialty__img"
+            />
+
+            <h3 class="specialty__title">Economia Financeira</h3>
+            <p class="specialty__description">
+              Somente a defesa nesta etapa pode levar à redução ou eliminação de
+              multas, economizando dinheiro a curto e longo prazo.
+            </p>
           </div>
-          <p>
-            Avaliação positiva: Qualidade, Valor Profissionais sérios e
-            capacitados, além de agilidade na prestação do serviço.
-          </p>
-          <div class="user">
-            <img src="images/gilson.png" />
-            <div class="info">
-              <h5>Gilson Geraldo</h5>
-              <p></p>
-            </div>
+
+          <div class="specialty__group specialty__line">
+            <img
+              src="assets/img/4.png"
+              alt="Imagem representando proteção da reputação"
+              class="specialty__img"
+            />
+
+            <h3 class="specialty__title">Proteção da Reputação</h3>
+            <p class="specialty__description">
+              Evitar uma suspensão ou cassação da CNH ajuda a manter a reputação
+              do motorista e a capacidade de buscar oportunidades de emprego que
+              exijam uma carteira de motorista válida.
+            </p>
           </div>
-        </div>
-        <div class="item">
-          <div class="rating">
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
+
+          <div class="specialty__group specialty__line">
+            <img
+              src="assets/img/5.png"
+              alt="Imagem representando prevenção de impactos profissionais"
+              class="specialty__img"
+            />
+
+            <h3 class="specialty__title">
+              Prevenção de Impactos Profissionais
+            </h3>
+            <p class="specialty__description">
+              Para motoristas profissionais, a defesa é essencial para evitar
+              interrupções na carreira e manter a capacidade de continuar
+              trabalhando.
+            </p>
           </div>
-          <p>
-            Profissionalismo excelente. Atendimento exemplar com ótimos
-            profissionais.
-          </p>
-          <div class="user">
-            <img src="images/gheny.png" />
-            <div class="info">
-              <h5>Gheny Sibele Beber Baldo</h5>
-              <p></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="rating">
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-          </div>
-          <p>
-            Muito atenciosos, ágeis e sempre em contato com o cliente. Minha
-            experiência com os serviços foram muito satisfatórias, recomendo.
-          </p>
-          <div class="user">
-            <img src="images/thomas.png" />
-            <div class="info">
-              <h5>Thomas Andrew Wolf Gilli</h5>
-              <p></p>
-            </div>
+
+          <div class="specialty__group">
+            <img
+              src="assets/img/6.png"
+              alt="Imagem representando conformidade com o devido processo legal"
+              class="specialty__img"
+            />
+
+            <h3 class="specialty__title">
+              Conformidade com o Devido Processo Legal
+            </h3>
+            <p class="specialty__description">
+              Uma defesa bem-sucedida garante que os direitos do motorista sejam
+              respeitados e que o processo de multa, suspensão ou cassação siga
+              os devidos procedimentos legais.
+            </p>
           </div>
         </div>
       </div>
     </div>
 
-    <footer class="container">
-      <span class="blur"></span>
-      <span class="blur"></span>
-      <div class="column">
-        <div class="logo">
-          <img src="images/favicon.jpeg" />
+    <!--==================== QUEM SOMOS ====================-->
+    <section class="about section" id="premium">
+      <div class="about__container container grid">
+        <div class="about__content">
+          <h2 class="section__title">Quem somos?</h2>
+          <p class="about__description">
+            O escritório Passig & Firmino Advogados possui ampla experiência em
+            processos de suspensão e cassação de CNH, estando sempre
+            comprometido em fornecer serviços jurídicos de alta qualidade aos
+            nossos clientes. Nossa equipe é formada por advogados experientes e
+            dedicados, que trabalham com ética e excelência para atender às
+            necessidades específicas de nossos clientes. Entendemos que cada
+            caso é único, e é por isso que nos dedicamos a buscar soluções
+            personalizadas e eficientes para cada um de nossos clientes. Seja
+            qual for sua necessidade legal relacionada ao trânsito, estamos aqui
+            para ajudar!
+          </p>
+          <ul class="about__values">
+            <li class="about__value">
+              <i class="bx bx-check"></i>Comprometimento
+            </li>
+            <li class="about__value"><i class="bx bx-check"></i>Experiência</li>
+            <li class="about__value"><i class="bx bx-check"></i>Ética</li>
+            <li class="about__value"><i class="bx bx-check"></i>Excelência</li>
+            <li class="about__value">
+              <i class="bx bx-check"></i>Personalização
+            </li>
+          </ul>
         </div>
-        <p>Passig & Firmino Advogados</p>
-        <div class="socials">
-          <a
-            target="_blank"
-            href="https://www.instagram.com/passigfirminoadvogados/"
-            ><i class="ri-instagram-line"></i
-          ></a>
+        <div class="about__images">
+          <img
+            src="assets/img/passigfirmino.png"
+            alt="Advogados do escritório Passig & Firmino"
+            class="about__img-big"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!--==================== FAQ ====================-->
+    <section class="faq section" id="faq">
+      <div class="faq__container container">
+        <h2 class="section__title">Perguntas Frequentes</h2>
+
+        <div class="faq__content">
+          <div class="faq__card">
+            <div class="faq__card-header">
+              <h3 class="faq__card-title">
+                Quais são as opções legais disponíveis para o meu caso?
+              </h3>
+              <span class="faq__card-icon" aria-label="Expandir">+</span>
+            </div>
+            <div class="faq__card-body">
+              <p>
+                As opções legais variam dependendo da natureza da notificação
+                que você recebeu. Elas podem incluir a contestação da infração,
+                recurso administrativo ou iniciar um processo judicial para
+                anular a notificação e o processo administrativo.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq__card">
+            <div class="faq__card-header">
+              <h3 class="faq__card-title">
+                Por que contratar um advogado para me defender da notificação?
+              </h3>
+              <span class="faq__card-icon" aria-label="Expandir">+</span>
+            </div>
+            <div class="faq__card-body">
+              <p>
+                Ao contratar um advogado que atue em processos de suspensão e
+                cassação de CNH, você terá um aliado dedicado à sua defesa,
+                personalizando a estratégia de acordo com suas circunstâncias
+                únicas. Além disso, o advogado cuidará de toda a papelada e
+                cuidará dos prazos legais. Com isso, você não precisa se
+                preocupar com o recebimento e cumprimento de intimações.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq__card">
+            <div class="faq__card-header">
+              <h3 class="faq__card-title">
+                Quais são as chances de sucesso na minha defesa?
+              </h3>
+              <span class="faq__card-icon" aria-label="Expandir">+</span>
+            </div>
+            <div class="faq__card-body">
+              <p>
+                É importante ressaltar que não podemos garantir um sucesso
+                absoluto, pois cada caso é único e as decisões finais são
+                tomadas pelo órgão administrativo competente ou pelo Poder
+                Judiciário.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq__card">
+            <div class="faq__card-header">
+              <h3 class="faq__card-title">
+                O que acontece se eu não tomar uma medida imediatamente?
+              </h3>
+              <span class="faq__card-icon" aria-label="Expandir">+</span>
+            </div>
+            <div class="faq__card-body">
+              <p>
+                Não tomar medidas imediatas pode resultar em consequências mais
+                graves, como a suspensão ou cassação efetiva da CNH. Portanto, é
+                fundamental agir rapidamente e evitar maiores transtornos.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq__card">
+            <div class="faq__card-header">
+              <h3 class="faq__card-title">
+                Minha CNH foi suspensa/cassada por excesso de pontos, é possível
+                resolver?
+              </h3>
+              <span class="faq__card-icon" aria-label="Expandir">+</span>
+            </div>
+            <div class="faq__card-body">
+              <p>
+                Sim, em muitos casos é possível resolver a suspensão ou cassação
+                da CNH por excesso de pontos, geralmente por meio de recursos ou
+                outras medidas administrativas e/ou judiciais.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq__card">
+            <div class="faq__card-header">
+              <h3 class="faq__card-title">
+                Não apresentei defesa ou recurso em nenhum momento nas multas
+                aplicadas. Vocês ainda podem me ajudar?
+              </h3>
+              <span class="faq__card-icon" aria-label="Expandir">+</span>
+            </div>
+            <div class="faq__card-body">
+              <p>
+                Sim, mesmo que você não tenha apresentado defesa ou recurso
+                anteriormente, é possível tomar medidas neste momento que possam
+                te ajudar a proteger os seus direitos.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq__card">
+            <div class="faq__card-header">
+              <h3 class="faq__card-title">
+                Estou com minha CNH bloqueada por excesso de pontos, mas algumas
+                das multas não fui eu que cometi. Posso fazer algo mesmo que
+                tenha perdido o prazo de indicação de condutor ao DETRAN?
+              </h3>
+              <span class="faq__card-icon" aria-label="Expandir">+</span>
+            </div>
+            <div class="faq__card-body">
+              <p>
+                Se você perdeu o prazo para indicar o real condutor na via
+                administrativa, ainda é possível fazê-lo por meio da via
+                judicial. Fale conosco caso tenha dúvidas sobre o seu direito.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq__card">
+            <div class="faq__card-header">
+              <h3 class="faq__card-title">
+                Já estou cumprindo a penalidade da suspensão da CNH, há algo
+                para agilizar o processo de reaver meu direito de dirigir?
+              </h3>
+              <span class="faq__card-icon" aria-label="Expandir">+</span>
+            </div>
+            <div class="faq__card-body">
+              <p>
+                Sim, em alguns casos, é possível explorar opções para reduzir o
+                período de suspensão, acelerar o processo de reabilitação da CNH
+                ou até mesmo para reaver imediatamente o seu direito de dirigir.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq__card">
+            <div class="faq__card-header">
+              <h3 class="faq__card-title">
+                Quais são os prazos para recorrer após receber uma notificação
+                de suspensão ou cassação?
+              </h3>
+              <span class="faq__card-icon" aria-label="Expandir">+</span>
+            </div>
+            <div class="faq__card-body">
+              <p>
+                Os prazos podem variar de acordo com a legislação local, mas é
+                crucial tomar medidas dentro de um período específico após
+                receber a notificação. Em caso de dúvidas, procure um advogado
+                imediatamente.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq__card">
+            <div class="faq__card-header">
+              <h3 class="faq__card-title">
+                Posso recorrer da suspensão da CNH mesmo se tiver cometido a
+                infração?
+              </h3>
+              <span class="faq__card-icon" aria-label="Expandir">+</span>
+            </div>
+            <div class="faq__card-body">
+              <p>
+                Sim, mesmo se você cometeu a infração, ainda pode recorrer da
+                suspensão da CNH. A defesa para o seu caso serve para que o
+                órgão de trânsito não cometa ilegalidades e para que a sua
+                infração seja imposta de forma correta.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.querySelectorAll(".faq__card-header").forEach((header) => {
+        header.addEventListener("click", () => {
+          const card = header.parentElement;
+          const body = card.querySelector(".faq__card-body");
+
+          header.classList.toggle("active");
+          body.classList.toggle("show");
+
+          if (body.classList.contains("show")) {
+            body.style.maxHeight = body.scrollHeight + "px";
+          } else {
+            body.style.maxHeight = null;
+          }
+
+          // Rotate the icon
+          const icon = header.querySelector(".faq__card-icon");
+          if (icon) {
+            icon.style.transform =
+              icon.style.transform === "rotate(180deg)"
+                ? "rotate(0deg)"
+                : "rotate(180deg)";
+          }
+        });
+      });
+    </script>
+
+    <!--==================== AVALIAÇÕES ====================-->
+    <!--==================== AVALIAÇÕES ====================-->
+    <section class="reviews section" id="reviews">
+      <div class="reviews__container container">
+        <div class="reviews__header">
+          <h2 class="section__title">O que nossos clientes dizem</h2>
+          <p class="section__subtitle">
+            Veja algumas das avaliações dos nossos clientes satisfeitos
+          </p>
+        </div>
+
+        <div class="reviews__grid">
+          <!-- ========== Review 1 =========== -->
+          <article class="reviews__card">
+            <div class="reviews__profile">
+              <img
+                src="assets/img/gilson.png"
+                alt="Foto de perfil de Gilson Geraldo"
+                class="reviews__img"
+              />
+              <h3 class="reviews__name">Gilson Geraldo</h3>
+            </div>
+            <p class="reviews__description">
+              "Avaliação positiva: Qualidade, Valor Profissionais sérios e
+              capacitados, além de agilidade na prestação do serviço."
+            </p>
+            <div class="reviews__rating">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <div class="reviews__source">
+              <i class="bx bxl-google"></i> Google Reviews
+            </div>
+          </article>
+
+          <!-- ========== Review 2 =========== -->
+          <article class="reviews__card">
+            <div class="reviews__profile">
+              <img
+                src="assets/img/gheny.png"
+                alt="Foto de perfil de Gheny Sibele Beber Baldo"
+                class="reviews__img"
+              />
+              <h3 class="reviews__name">Gheny Sibele Beber Baldo</h3>
+            </div>
+            <p class="reviews__description">
+              "Profissionalismo excelente. Atendimento exemplar com ótimos
+              profissionais."
+            </p>
+            <div class="reviews__rating">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <div class="reviews__source">
+              <i class="bx bxl-google"></i> Google Reviews
+            </div>
+          </article>
+
+          <!-- ========== Review 3 =========== -->
+          <article class="reviews__card">
+            <div class="reviews__profile">
+              <img
+                src="assets/img/thomas.png"
+                alt="Foto de perfil de Thomas Andrew Wolf Gilli"
+                class="reviews__img"
+              />
+              <h3 class="reviews__name">Thomas Andrew Wolf Gilli</h3>
+            </div>
+            <p class="reviews__description">
+              "Muito atenciosos, ágeis e sempre em contato com o cliente. Minha
+              experiência com os serviços foram muito satisfatórias, recomendo."
+            </p>
+            <div class="reviews__rating">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <div class="reviews__source">
+              <i class="bx bxl-google"></i> Google Reviews
+            </div>
+          </article>
+
+          <!-- ========== Review 4 =========== -->
+          <article class="reviews__card">
+            <div class="reviews__profile">
+              <img
+                src="assets/img/melanie.png"
+                alt="Foto de perfil de Melanie Wolf"
+                class="reviews__img"
+              />
+              <h3 class="reviews__name">Melanie Wolf</h3>
+            </div>
+            <p class="reviews__description">
+              "Excelentes profissionais! Preocupados com o cliente e em resolver
+              a situação."
+            </p>
+            <div class="reviews__rating">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <div class="reviews__source">
+              <i class="bx bxl-google"></i> Google Reviews
+            </div>
+          </article>
+
+          <!-- ========== Review 5 =========== -->
+          <article class="reviews__card">
+            <div class="reviews__profile">
+              <img
+                src="assets/img/gustavo.png"
+                alt="Foto de perfil de Gustavo Rosar"
+                class="reviews__img"
+              />
+              <h3 class="reviews__name">Gustavo Rosar</h3>
+            </div>
+            <p class="reviews__description">
+              "Ótimos profissionais, me ajudaram muito quando precisei contratar
+              um advogado."
+            </p>
+            <div class="reviews__rating">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <div class="reviews__source">
+              <i class="bx bxl-google"></i> Google Reviews
+            </div>
+          </article>
+
+          <!-- ========== Review 6 =========== -->
+          <article class="reviews__card">
+            <div class="reviews__profile">
+              <img
+                src="assets/img/raylson.png"
+                alt="Foto de perfil de Raylson Abreu"
+                class="reviews__img"
+              />
+              <h3 class="reviews__name">Raylson Abreu</h3>
+            </div>
+            <p class="reviews__description">
+              "Prestam um ótimo atendimento ao seus clientes , conduzem tudo com
+              rapidez e eficiência."
+            </p>
+            <div class="reviews__rating">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <div class="reviews__source">
+              <i class="bx bxl-google"></i> Google Reviews
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+      <div class="footer__container container">
+        <h1 class="footer__title">Passig & Firmino Advogados.</h1>
+
+        <div class="footer__content grid">
+          <div class="footer__data">
+            <img src="assets/img/favicon2.png" alt="Logotipo PF Advocacia" />
+          </div>
+
+          <div class="footer__data">
+            <h2 class="footer__subtitle">Endereço</h2>
+            <p class="footer__information">
+              R. Dom Bosco, 701 - Sala 102 - Centro <br />
+              Rio do Sul, Santa Catarina, Brasil
+              <img
+                src="assets/img/brazilflag.png"
+                alt="Bandeira do Brasil"
+                class="footer__flag"
+              />
+            </p>
+          </div>
+
+          <div class="footer__data">
+            <h2 class="footer__subtitle">Contatos</h2>
+            <p class="footer__information">
+              (47) 3522-5124 <br />
+              bpfadvocacia@gmail.com
+            </p>
+          </div>
+
+          <div class="footer__data">
+            <h2 class="footer__subtitle">Escritório</h2>
+            <p class="footer__information">
+              Atendimento de Segunda à Sexta,<br />
+              das 08:30 às 12:00 e das 13:30 às 18:30
+            </p>
+          </div>
+        </div>
+
+        <div class="footer__group">
+          <ul class="footer__social">
+            <a
+              href="https://www.facebook.com/bpfadvogados/"
+              target="_blank"
+              class="footer__social-link"
+              aria-label="Facebook"
+            >
+              <i class="bx bxl-facebook"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/passigfirminoadvogados/"
+              target="_blank"
+              class="footer__social-link"
+              aria-label="Instagram"
+            >
+              <i class="bx bxl-instagram"></i>
+            </a>
+          </ul>
+
+          <span class="footer__copy">
+            &#169; Von. Todos os direitos reservados
+          </span>
         </div>
       </div>
     </footer>
 
-    <div class="copyright">
-      Copyright © 2023 Passig & Firmino Advogados. Todos os direitos são
-      reservados.
-    </div>
+    <!-- Botão fixo de WhatsApp -->
+    <a
+      href="https://api.whatsapp.com/send?phone=554735225124&text=Ol%C3%A1!%20Gostaria%20de%20conversar%20com%20um%20Advogado%20sobre%20minha%20notifica%C3%A7%C3%A3o%20de%20tr%C3%A2nsito"
+      class="whatsapp-button"
+      id="whatsapp-button"
+      target="_blank"
+      aria-label="Abrir conversa no WhatsApp com um advogado"
+    >
+      <i class="bx bxl-whatsapp"></i> Desejo falar com um advogado
+    </a>
 
-    <script src="script.js"></script>
+    <!--========== SCROLL UP ==========-->
+    <a href="#" class="scrollup" id="scroll-up" aria-label="Voltar ao topo">
+      <i class="bx bx-up-arrow-alt"></i>
+    </a>
 
+    <!--=============== SCRIPTS ===============-->
+    <script src="assets/js/mixitup.min.js"></script>
+    <script src="assets/js/main.js"></script>
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=AW-395923033"
