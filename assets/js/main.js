@@ -1,111 +1,157 @@
-/*=============== LOADER ===============*/
-onload = () => {
-  const load = document.getElementById("load");
+const prefersReducedMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)",
+).matches;
 
-  setTimeout(() => {
-    load.style.display = "none";
-  }, 2500);
-};
-
-/*=============== SHOW MENU ===============*/
+/*=============== SHOW / HIDE MENU ===============*/
 const navMenu = document.getElementById("nav-menu"),
   navToggle = document.getElementById("nav-toggle"),
   navClose = document.getElementById("nav-close");
 
-/*===== MENU SHOW =====*/
-/* Validate if constant exists */
-if (navToggle) {
-  navToggle.addEventListener("click", () => {
-    navMenu.classList.add("show-menu");
-  });
+function setMenu(open) {
+  navMenu.classList.toggle("show-menu", open);
+  navToggle.setAttribute("aria-expanded", String(open));
+  document.body.style.overflow = open ? "hidden" : "";
 }
 
-/*===== MENU HIDDEN =====*/
-/* Validate if constant exists */
-if (navClose) {
-  navClose.addEventListener("click", () => {
-    navMenu.classList.remove("show-menu");
-  });
-}
-
-/*=============== REMOVE MENU MOBILE ===============*/
-const navLink = document.querySelectorAll(".nav__link");
-
-function linkAction() {
-  const navMenu = document.getElementById("nav-menu");
-  // When we click on each nav__link, we remove the show-menu class
-  navMenu.classList.remove("show-menu");
-}
-navLink.forEach((n) => n.addEventListener("click", linkAction));
-
-/*=============== CHANGE BACKGROUND HEADER ===============*/
-function scrollHeader() {
-  const header = document.getElementById("header");
-  // When the scroll is greater than 50 viewport height, add the scroll-header class to the header tag
-  if (this.scrollY >= 50) header.classList.add("scroll-header");
-  else header.classList.remove("scroll-header");
-}
-window.addEventListener("scroll", scrollHeader);
-
-/*=============== MIXITUP FILTER PRODUCTS ===============*/
-let mixerProducts = mixitup(".products__content", {
-  selectors: {
-    target: ".products__card",
-  },
-  animation: {
-    duration: 300,
-  },
+navToggle.addEventListener("click", () => setMenu(true));
+navClose.addEventListener("click", () => setMenu(false));
+document
+  .querySelectorAll(".nav__link")
+  .forEach((link) => link.addEventListener("click", () => setMenu(false)));
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && navMenu.classList.contains("show-menu"))
+    setMenu(false);
 });
 
-/* Default filter products */
-mixerProducts.filter(".delicacies");
+/*=============== HEADER BACKGROUND + SCROLL UP ===============*/
+const header = document.getElementById("header"),
+  scrollUpButton = document.getElementById("scroll-up");
 
-/* Link active products */
-const linkProducts = document.querySelectorAll(".products__item");
-
-function activeProducts() {
-  linkProducts.forEach((l) => l.classList.remove("active-product"));
-  this.classList.add("active-product");
+function onScroll() {
+  const y = window.scrollY;
+  header.classList.toggle("scroll-header", y >= 50);
+  scrollUpButton.classList.toggle("show-scroll", y >= 350);
 }
-linkProducts.forEach((l) => l.addEventListener("click", activeProducts));
-
-/*=============== SHOW SCROLL UP ===============*/
-function scrollUp() {
-  const scrollUp = document.getElementById("scroll-up");
-  // When the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scroll-top class
-  if (this.scrollY >= 350) scrollUp.classList.add("show-scroll");
-  else scrollUp.classList.remove("show-scroll");
-}
-window.addEventListener("scroll", scrollUp);
+window.addEventListener("scroll", onScroll, { passive: true });
+onScroll();
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
-const sections = document.querySelectorAll("section[id]");
+const navLinks = new Map(
+  [...document.querySelectorAll(".nav__link")].map((link) => [
+    link.getAttribute("href").slice(1),
+    link,
+  ]),
+);
 
-function scrollActive() {
-  const scrollY = window.pageYOffset;
+const sectionObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      navLinks.forEach((link, id) =>
+        link.classList.toggle("active-link", id === entry.target.id),
+      );
+    });
+  },
+  { rootMargin: "-45% 0px -50% 0px" },
+);
+document
+  .querySelectorAll("main section[id]")
+  .forEach((section) => sectionObserver.observe(section));
 
-  sections.forEach((current) => {
-    const sectionHeight = current.offsetHeight,
-      sectionTop = current.offsetTop - 58,
-      sectionId = current.getAttribute("id");
+/*=============== FAQ: ACORDEÃO ANIMADO ===============*/
+/* Anima a altura do <details> para abrir/fechar igual em todos os navegadores */
+const FAQ_DURATION = 400;
+const FAQ_EASING = "cubic-bezier(0.65, 0, 0.35, 1)";
 
-    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      document
-        .querySelector(".nav__menu a[href*=" + sectionId + "]")
-        .classList.add("active-link");
+document.querySelectorAll(".faq__card").forEach((details) => {
+  const summary = details.querySelector("summary");
+  let animation = null;
+
+  function animateHeight(from, to, opening) {
+    animation?.cancel();
+    details.style.overflow = "hidden";
+    animation = details.animate(
+      { height: [`${from}px`, `${to}px`] },
+      { duration: FAQ_DURATION, easing: FAQ_EASING },
+    );
+    animation.onfinish = () => {
+      details.open = opening;
+      details.style.height = details.style.overflow = "";
+      animation = null;
+    };
+  }
+
+  summary.addEventListener("click", (e) => {
+    if (prefersReducedMotion) {
+      details.classList.toggle("is-open", !details.open);
+      return;
+    }
+    e.preventDefault();
+
+    const startHeight = details.offsetHeight;
+    const closing = details.classList.contains("is-open");
+
+    if (closing) {
+      details.classList.remove("is-open");
+      const border = details.offsetHeight - details.clientHeight;
+      animateHeight(startHeight, summary.offsetHeight + border, false);
     } else {
-      document
-        .querySelector(".nav__menu a[href*=" + sectionId + "]")
-        .classList.remove("active-link");
+      details.open = true;
+      // Força o reflow antes de adicionar a classe para a resposta animar
+      void details.offsetHeight;
+      details.classList.add("is-open");
+      animateHeight(startHeight, details.scrollHeight, true);
     }
   });
-}
-window.addEventListener("scroll", scrollActive);
+});
 
-document
-  .getElementById("whatsapp-button")
-  .addEventListener("click", function () {
-    gtag_report_conversion(
-      "https://api.whatsapp.com/send?phone=554735225124&text=Ol%C3%A1!%20Gostaria%20de%20conversar%20com%20um%20Advogado%20sobre%20minha%20notifica%C3%A7%C3%A3o%20de%20tr%C3%A2nsito"
-    );
+/*=============== REVEAL ON SCROLL ===============*/
+if (!prefersReducedMotion) {
+  const STAGGER = 80; // ms entre itens irmãos
+
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      // Itens que entram na tela juntos aparecem em sequência
+      entries
+        .filter((entry) => entry.isIntersecting)
+        .forEach((entry, i) => {
+          const el = entry.target;
+          el.style.setProperty(
+            "--reveal-delay",
+            `${Math.min(i, 5) * STAGGER}ms`,
+          );
+          el.classList.add("is-visible");
+          revealObserver.unobserve(el);
+          // Remove as classes ao fim da entrada para não interferir nos hovers
+          el.addEventListener("transitionend", function done(e) {
+            if (e.target !== el) return; // ignora transições dos filhos
+            el.removeEventListener("transitionend", done);
+            el.classList.remove("reveal", "is-visible");
+            el.style.removeProperty("--reveal-delay");
+          });
+        });
+    },
+    { rootMargin: "0px 0px -10% 0px" },
+  );
+
+  document
+    .querySelectorAll(
+      ".section__header, .about__content, .about__images, .cta__container, .specialty__group, .faq__card, .reviews__card",
+    )
+    .forEach((el) => {
+      el.classList.add("reveal");
+      revealObserver.observe(el);
+    });
+}
+
+/*=============== GOOGLE ADS: CONVERSÃO NO CLIQUE DO WHATSAPP ===============*/
+document.querySelectorAll(".js-whatsapp").forEach((link) => {
+  link.addEventListener("click", () => {
+    if (typeof gtag === "function") {
+      gtag("event", "conversion", {
+        send_to: "AW-395923033/ZiSbCILypokZENmc5bwB",
+        transport_type: "beacon",
+      });
+    }
   });
+});

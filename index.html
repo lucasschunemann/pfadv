@@ -1,36 +1,185 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Passig & Firmino Advogados | Direito Imobiliário</title>
+    <meta
+      name="description"
+      content="Assessoria jurídica em Direito Imobiliário para proprietários, compradores, vendedores, investidores, condomínios, imobiliárias e empresas. Compra e venda, contratos, regularização, locações, usucapião e condomínios."
+    />
+    <meta name="theme-color" content="#161617" />
+
+    <!--=============== OPEN GRAPH ===============-->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Passig & Firmino Advogados" />
+    <meta
+      property="og:title"
+      content="Passig & Firmino Advogados | Direito Imobiliário"
+    />
+    <meta
+      property="og:description"
+      content="Direito Imobiliário com segurança para decisões, negócios e patrimônio."
+    />
+    <meta property="og:image" content="assets/img/og.jpg" />
 
     <!--=============== FAVICON ===============-->
+    <link rel="icon" href="assets/img/favicon-48.png" type="image/png" />
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+
+    <!--=============== FONTS ===============-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="shortcut icon"
-      href="assets/img/favicon2.png"
-      type="image/x-icon"
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
     />
 
-    <!--=============== BOXICONS ===============-->
+    <!--=============== PRELOAD HERO ===============-->
     <link
-      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
-      rel="stylesheet"
+      rel="preload"
+      as="image"
+      href="assets/img/hero.webp"
+      imagesrcset="assets/img/hero-sm.webp 800w, assets/img/hero.webp 1400w"
+      imagesizes="(min-width: 1024px) 50vw, 100vw"
+      fetchpriority="high"
     />
 
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css" />
 
-    <title>Passig & Firmino Advogados</title>
+    <!--=============== DADOS ESTRUTURADOS ===============-->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LegalService",
+        "name": "Passig & Firmino Advogados",
+        "description": "Escritório de advocacia com atuação em Direito Imobiliário.",
+        "telephone": "+55-47-3522-5124",
+        "email": "bpfadvocacia@gmail.com",
+        "image": "assets/img/og.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "R. Dom Bosco, 701 - Sala 102 - Centro",
+          "addressLocality": "Rio do Sul",
+          "addressRegion": "SC",
+          "addressCountry": "BR"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "08:30",
+            "closes": "12:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "13:30",
+            "closes": "18:30"
+          }
+        ],
+        "sameAs": [
+          "https://www.facebook.com/bpfadvogados/",
+          "https://www.instagram.com/passigfirminoadvogados/"
+        ]
+      }
+    </script>
   </head>
   <body>
+    <!--=============== ÍCONES (SVG SPRITE) ===============-->
+    <svg xmlns="http://www.w3.org/2000/svg" hidden>
+      <symbol id="i-whatsapp" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 0 1-4.79-1.31l-.34-.2-3.56.93.95-3.47-.22-.36a9.39 9.39 0 0 1-1.44-5.01c0-5.2 4.23-9.42 9.43-9.42a9.36 9.36 0 0 1 6.66 2.76 9.36 9.36 0 0 1 2.76 6.67c0 5.2-4.23 9.42-9.44 9.42zm8.03-17.45A11.27 11.27 0 0 0 12.04.72C5.79.72.7 5.8.7 12.06c0 2 .52 3.95 1.52 5.67L.6 23.6l6-1.57a11.3 11.3 0 0 0 5.43 1.38h.01c6.25 0 11.34-5.09 11.34-11.34 0-3.03-1.18-5.88-3.32-8.02z"
+        />
+      </symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16" />
+      </symbol>
+      <symbol id="i-close" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18" />
+      </symbol>
+      <symbol id="i-arrow-up" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 19V5M5 12l7-7 7 7" />
+      </symbol>
+      <symbol id="i-chevron" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6" />
+      </symbol>
+      <symbol id="i-star" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95z" />
+      </symbol>
+      <symbol id="i-google" viewBox="0 0 24 24">
+        <path fill="#4285F4" d="M22.5 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.9a5.04 5.04 0 0 1-2.19 3.31v2.75h3.54c2.08-1.91 3.25-4.73 3.25-8.07z" />
+        <path fill="#34A853" d="M12 23c2.96 0 5.45-.98 7.26-2.66l-3.54-2.75c-.98.66-2.24 1.05-3.72 1.05-2.86 0-5.28-1.93-6.15-4.53H2.19v2.84A11 11 0 0 0 12 23z" />
+        <path fill="#FBBC05" d="M5.85 14.1a6.6 6.6 0 0 1 0-4.2V7.06H2.19a11 11 0 0 0 0 9.88l3.66-2.84z" />
+        <path fill="#EA4335" d="M12 5.38c1.61 0 3.06.56 4.2 1.64l3.14-3.14A10.97 10.97 0 0 0 12 1 11 11 0 0 0 2.19 7.06l3.66 2.84C6.72 7.3 9.14 5.38 12 5.38z" />
+      </symbol>
+      <symbol id="i-facebook" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.87.25-1.46 1.5-1.46h1.6V4.46A21 21 0 0 0 14.27 4.3c-2.3 0-3.87 1.4-3.87 3.98v2.22H7.8v3h2.6V21z" />
+      </symbol>
+      <symbol id="i-instagram" viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="18" height="18" rx="5" />
+          <circle cx="12" cy="12" r="4" />
+        </g>
+        <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" />
+      </symbol>
+
+      <!-- Ícones dos serviços -->
+      <g id="service-icons" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <symbol id="s-compra" viewBox="0 0 48 48">
+          <path d="M6 22 24 8l18 14" />
+          <path d="M11 18v22h26V18" />
+          <path d="M20 40V29h8v11" />
+          <circle cx="36" cy="10" r="3" />
+          <path d="M38.2 12.2 42 16m-2-2 1.5-1.5" />
+        </symbol>
+        <symbol id="s-contratos" viewBox="0 0 48 48">
+          <path d="M28 5H12a3 3 0 0 0-3 3v32a3 3 0 0 0 3 3h24a3 3 0 0 0 3-3V16z" />
+          <path d="M28 5v11h11" />
+          <path d="M16 22h16M16 28h16M16 34h8" />
+          <path d="m27 36 3 3 6-6" />
+        </symbol>
+        <symbol id="s-regularizacao" viewBox="0 0 48 48">
+          <path d="M16 8h-4a3 3 0 0 0-3 3v29a3 3 0 0 0 3 3h24a3 3 0 0 0 3-3V11a3 3 0 0 0-3-3h-4" />
+          <rect x="16" y="4" width="16" height="8" rx="2" />
+          <path d="m17 27 5 5 9-10" />
+        </symbol>
+        <symbol id="s-locacoes" viewBox="0 0 48 48">
+          <circle cx="16" cy="24" r="8" />
+          <circle cx="16" cy="24" r="2.5" />
+          <path d="M24 24h19M37 24v6M42 24v4" />
+        </symbol>
+        <symbol id="s-posse" viewBox="0 0 48 48">
+          <path d="M24 43s13-11.5 13-23a13 13 0 0 0-26 0c0 11.5 13 23 13 23z" />
+          <path d="m17 21 7-6 7 6" />
+          <path d="M19.5 19v7h9v-7" />
+        </symbol>
+        <symbol id="s-condominios" viewBox="0 0 48 48">
+          <path d="M8 43V9a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v34" />
+          <path d="M28 19h10a2 2 0 0 1 2 2v22" />
+          <path d="M4 43h40" />
+          <path d="M14 14h2M20 14h2M14 21h2M20 21h2M14 28h2M20 28h2M33 26h2M33 33h2" />
+          <path d="M15 43v-7h6v7" />
+        </symbol>
+      </g>
+    </svg>
+
+    <a class="skip-link" href="#main">Pular para o conteúdo</a>
+
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
-      <nav class="nav container">
-        <a href="#" class="nav__logo">
+      <nav class="nav container" aria-label="Principal">
+        <a href="#home" class="nav__logo">
           <img
-            src="assets/img/icon.png"
-            alt="Logo Passig & Firmino Advogados"
+            src="assets/img/logo.webp"
+            alt=""
             class="nav__logo-img"
+            width="32"
+            height="32"
           />
           Passig & Firmino Advogados
         </a>
@@ -38,628 +187,558 @@
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#home" class="nav__link active-link">Home</a>
+              <a href="#home" class="nav__link active-link">Início</a>
             </li>
             <li class="nav__item">
-              <a href="#specialty" class="nav__link">Nossos Serviços</a>
+              <a href="#servicos" class="nav__link">Nossos Serviços</a>
             </li>
             <li class="nav__item">
-              <a href="#premium" class="nav__link">Quem somos?</a>
+              <a href="#quem-somos" class="nav__link">Quem somos?</a>
             </li>
             <li class="nav__item">
               <a href="#faq" class="nav__link">Perguntas frequentes</a>
             </li>
             <li class="nav__item">
-              <a href="#reviews" class="nav__link">Avaliações</a>
+              <a href="#avaliacoes" class="nav__link">Avaliações</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contato" class="nav__link">Contato</a>
             </li>
           </ul>
-          <div class="nav__close" id="nav-close">
-            <i class="bx bx-x" aria-label="Fechar Menu"></i>
-          </div>
+          <button class="nav__close" id="nav-close" type="button" aria-label="Fechar menu">
+            <svg class="icon"><use href="#i-close" /></svg>
+          </button>
         </div>
 
-        <!-- Toggle button -->
-        <div class="nav__toggle" id="nav-toggle">
-          <i class="bx bx-menu" aria-label="Abrir Menu"></i>
-        </div>
+        <button
+          class="nav__toggle"
+          id="nav-toggle"
+          type="button"
+          aria-label="Abrir menu"
+          aria-controls="nav-menu"
+          aria-expanded="false"
+        >
+          <svg class="icon"><use href="#i-menu" /></svg>
+        </button>
       </nav>
     </header>
 
-    <!--==================== MAIN ====================-->
-    <main>
+    <main id="main">
       <!--==================== HOME ====================-->
-      <section class="home grid" id="home">
+      <section class="home" id="home">
         <div class="home__container">
           <div class="home__content container">
             <h1 class="home__title">
-              Recebeu notificação de suspensão da sua CNH?<span>?</span>
+              Direito Imobiliário <span>com segurança</span> para decisões,
+              negócios e patrimônio
             </h1>
             <p class="home__description">
-              Seja multa, suspensão ou cassação, podemos te ajudar.
+              Assessoria jurídica para proprietários, compradores, vendedores,
+              investidores, condomínios, imobiliárias e empresas em questões
+              relacionadas a imóveis, contratos, regularização e conflitos
+              imobiliários.
             </p>
-          </div>
-        </div>
-
-        <img
-          src="assets/img/homeimage.jpg"
-          alt="Imagem representando notificação de suspensão de CNH"
-          class="home__img"
-        />
-      </section>
-    </main>
-
-    <!--==================== ESPECIALTY ====================-->
-    <div class="specialty section container" id="specialty">
-      <div class="specialty__container">
-        <div class="specialty__box">
-          <h2 class="section__title">
-            Advogados especializados no serviço e comprometimento com o cliente.
-          </h2>
-
-          <div>
             <a
-              href="https://api.whatsapp.com/send?phone=554735225124&text=Ol%C3%A1!%20Gostaria%20de%20conversar%20com%20um%20Advogado%20sobre%20minha%20notifica%C3%A7%C3%A3o%20de%20tr%C3%A2nsito"
-              class="button specialty__button whatsapp-specialty-button"
+              href="https://api.whatsapp.com/send?phone=554735225124&text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20advogado%20sobre%20uma%20quest%C3%A3o%20imobili%C3%A1ria."
+              class="button button--gold js-whatsapp"
               target="_blank"
-              id="whatsapp-button"
+              rel="noopener"
             >
-              <i class="bx bxl-whatsapp"></i> Desejo falar com um advogado
+              <svg class="icon"><use href="#i-whatsapp" /></svg>
+              Falar com um advogado
             </a>
           </div>
         </div>
 
-        <div class="specialty__category">
-          <div class="specialty__group specialty__line">
-            <img
-              src="assets/img/1.png"
-              alt="Imagem representando continuidade no seu direito de dirigir"
-              class="specialty__img"
-            />
+        <img
+          src="assets/img/hero.webp"
+          srcset="assets/img/hero-sm.webp 800w, assets/img/hero.webp 1400w"
+          sizes="(min-width: 1024px) 50vw, 100vw"
+          alt=""
+          class="home__img"
+          width="1400"
+          height="933"
+          fetchpriority="high"
+        />
+      </section>
 
-            <h3 class="specialty__title">
-              Continuidade no seu direito de dirigir
-            </h3>
-            <p class="specialty__description">
-              Contestar a notificação permite que você continue dirigindo
-              enquanto o processo legal está em andamento, evitando suspensões
-              imediatas da sua CNH.
-            </p>
-          </div>
+      <!--==================== SERVIÇOS ====================-->
+      <section class="specialty section" id="servicos">
+        <div class="specialty__container container">
+          <header class="section__header">
+            <span class="section__eyebrow">Nossos serviços</span>
+            <h2 class="section__title">Como podemos ajudar?</h2>
+          </header>
 
-          <div class="specialty__group specialty__line">
-            <img
-              src="assets/img/2.png"
-              alt="Imagem representando manutenção da pontuação original"
-              class="specialty__img"
-            />
+          <div class="specialty__category">
+            <article class="specialty__group">
+              <svg class="specialty__icon" aria-hidden="true"><use href="#s-compra" /></svg>
+              <h3 class="specialty__title">Compra e venda de imóveis</h3>
+              <p class="specialty__description">
+                Assessoria jurídica na análise da negociação, documentação,
+                contratos e riscos envolvidos na compra ou venda de imóveis.
+              </p>
+            </article>
 
-            <h3 class="specialty__title">Manutenção da pontuação original</h3>
-            <p class="specialty__description">
-              Uma defesa bem-sucedida pode resultar na redução do número de
-              pontos acumulados na sua carteira de motorista, evitando futuras
-              suspensões.
-            </p>
-          </div>
+            <article class="specialty__group">
+              <svg class="specialty__icon" aria-hidden="true"><use href="#s-contratos" /></svg>
+              <h3 class="specialty__title">Contratos imobiliários</h3>
+              <p class="specialty__description">
+                Elaboração, revisão e análise de contratos relacionados a
+                imóveis e negócios imobiliários, com foco na prevenção de riscos
+                e na segurança da operação.
+              </p>
+            </article>
 
-          <div class="specialty__group">
-            <img
-              src="assets/img/3.png"
-              alt="Imagem representando economia financeira"
-              class="specialty__img"
-            />
+            <article class="specialty__group">
+              <svg class="specialty__icon" aria-hidden="true"><use href="#s-regularizacao" /></svg>
+              <h3 class="specialty__title">Regularização de imóveis</h3>
+              <p class="specialty__description">
+                Orientação e atuação jurídica em situações envolvendo imóveis
+                sem escritura, problemas registrais, construções não averbadas e
+                outras pendências documentais.
+              </p>
+            </article>
 
-            <h3 class="specialty__title">Economia Financeira</h3>
-            <p class="specialty__description">
-              Somente a defesa nesta etapa pode levar à redução ou eliminação de
-              multas, economizando dinheiro a curto e longo prazo.
-            </p>
-          </div>
+            <article class="specialty__group">
+              <svg class="specialty__icon" aria-hidden="true"><use href="#s-locacoes" /></svg>
+              <h3 class="specialty__title">Locações</h3>
+              <p class="specialty__description">
+                Assessoria para locadores, locatários e imobiliárias em
+                contratos, inadimplemento, garantias, rescisões, cobranças e
+                conflitos locatícios.
+              </p>
+            </article>
 
-          <div class="specialty__group specialty__line">
-            <img
-              src="assets/img/4.png"
-              alt="Imagem representando proteção da reputação"
-              class="specialty__img"
-            />
+            <article class="specialty__group">
+              <svg class="specialty__icon" aria-hidden="true"><use href="#s-posse" /></svg>
+              <h3 class="specialty__title">Posse e propriedade</h3>
+              <p class="specialty__description">
+                Atuação em questões relacionadas à posse, propriedade, usucapião
+                e conflitos envolvendo imóveis.
+              </p>
+            </article>
 
-            <h3 class="specialty__title">Proteção da Reputação</h3>
-            <p class="specialty__description">
-              Evitar uma suspensão ou cassação da CNH ajuda a manter a reputação
-              do motorista e a capacidade de buscar oportunidades de emprego que
-              exijam uma carteira de motorista válida.
-            </p>
-          </div>
-
-          <div class="specialty__group specialty__line">
-            <img
-              src="assets/img/5.png"
-              alt="Imagem representando prevenção de impactos profissionais"
-              class="specialty__img"
-            />
-
-            <h3 class="specialty__title">
-              Prevenção de Impactos Profissionais
-            </h3>
-            <p class="specialty__description">
-              Para motoristas profissionais, a defesa é essencial para evitar
-              interrupções na carreira e manter a capacidade de continuar
-              trabalhando.
-            </p>
-          </div>
-
-          <div class="specialty__group">
-            <img
-              src="assets/img/6.png"
-              alt="Imagem representando conformidade com o devido processo legal"
-              class="specialty__img"
-            />
-
-            <h3 class="specialty__title">
-              Conformidade com o Devido Processo Legal
-            </h3>
-            <p class="specialty__description">
-              Uma defesa bem-sucedida garante que os direitos do motorista sejam
-              respeitados e que o processo de multa, suspensão ou cassação siga
-              os devidos procedimentos legais.
-            </p>
+            <article class="specialty__group">
+              <svg class="specialty__icon" aria-hidden="true"><use href="#s-condominios" /></svg>
+              <h3 class="specialty__title">Condomínios</h3>
+              <p class="specialty__description">
+                Assessoria jurídica para condomínios, síndicos e proprietários
+                em convenções, assembleias, cobranças, obras e conflitos
+                condominiais.
+              </p>
+            </article>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
 
-    <!--==================== QUEM SOMOS ====================-->
-    <section class="about section" id="premium">
-      <div class="about__container container grid">
-        <div class="about__content">
-          <h2 class="section__title">Quem somos?</h2>
-          <p class="about__description">
-            O escritório Passig & Firmino Advogados possui ampla experiência em
-            processos de suspensão e cassação de CNH, estando sempre
-            comprometido em fornecer serviços jurídicos de alta qualidade aos
-            nossos clientes. Nossa equipe é formada por advogados experientes e
-            dedicados, que trabalham com ética e excelência para atender às
-            necessidades específicas de nossos clientes. Entendemos que cada
-            caso é único, e é por isso que nos dedicamos a buscar soluções
-            personalizadas e eficientes para cada um de nossos clientes. Seja
-            qual for sua necessidade legal relacionada ao trânsito, estamos aqui
-            para ajudar!
+      <!--==================== QUEM SOMOS ====================-->
+      <section class="about section" id="quem-somos">
+        <div class="about__container container">
+          <div class="about__content">
+            <span class="section__eyebrow">Quem somos?</span>
+            <h2 class="section__title">Passig & Firmino Advogados</h2>
+            <div class="about__description">
+              <p>
+                O Passig & Firmino Advogados é um escritório com atuação voltada
+                ao Direito Imobiliário e às questões jurídicas relacionadas a
+                imóveis, patrimônio e negócios imobiliários.
+              </p>
+              <p>
+                Atuamos tanto na prevenção de problemas quanto na solução de
+                conflitos, assessorando pessoas, proprietários, compradores,
+                vendedores, investidores, condomínios, imobiliárias e empresas em
+                decisões que envolvem imóveis.
+              </p>
+              <p>
+                Nosso trabalho busca unir conhecimento jurídico, análise dos
+                riscos envolvidos e compreensão da realidade de cada negociação
+                ou conflito.
+              </p>
+              <p>
+                Valorizamos uma relação próxima e transparente com o cliente. As
+                alternativas são apresentadas de forma clara e as decisões
+                estratégicas relevantes são discutidas antes da definição dos
+                próximos passos.
+              </p>
+              <p>
+                O objetivo é permitir que o cliente compreenda sua situação
+                jurídica, os riscos existentes e as possibilidades disponíveis
+                para tomar decisões com maior segurança.
+              </p>
+            </div>
+          </div>
+          <div class="about__images">
+            <img
+              src="assets/img/socios.webp"
+              alt="Advogados do escritório Passig & Firmino"
+              class="about__img-big"
+              width="720"
+              height="720"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!--==================== FAQ ====================-->
+      <section class="faq section" id="faq">
+        <div class="faq__container container">
+          <header class="section__header">
+            <span class="section__eyebrow">Dúvidas</span>
+            <h2 class="section__title">Perguntas frequentes</h2>
+          </header>
+
+          <div class="faq__content">
+            <details class="faq__card">
+              <summary class="faq__card-header">
+                <h3 class="faq__card-title">
+                  Por que contar com um advogado antes de comprar um imóvel?
+                </h3>
+                <svg class="faq__card-icon" aria-hidden="true"><use href="#i-chevron" /></svg>
+              </summary>
+              <div class="faq__card-body">
+                <p>
+                  A compra de um imóvel envolve valores elevados e diversos
+                  riscos jurídicos. A análise prévia pode identificar problemas
+                  relacionados à matrícula, ao proprietário, à documentação, às
+                  dívidas, às restrições existentes e ao próprio contrato da
+                  negociação.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq__card">
+              <summary class="faq__card-header">
+                <h3 class="faq__card-title">
+                  O contrato de compra e venda apresentado pela imobiliária
+                  precisa ser revisado?
+                </h3>
+                <svg class="faq__card-icon" aria-hidden="true"><use href="#i-chevron" /></svg>
+              </summary>
+              <div class="faq__card-body">
+                <p>
+                  Nem todo contrato exige alterações, mas sua análise jurídica
+                  pode ser importante para verificar obrigações, prazos, multas,
+                  formas de pagamento, responsabilidades das partes e riscos
+                  específicos da negociação.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq__card">
+              <summary class="faq__card-header">
+                <h3 class="faq__card-title">
+                  Um imóvel sem escritura pode ser regularizado?
+                </h3>
+                <svg class="faq__card-icon" aria-hidden="true"><use href="#i-chevron" /></svg>
+              </summary>
+              <div class="faq__card-body">
+                <p>
+                  Em muitos casos, sim. A solução depende da origem da posse, da
+                  documentação existente, da situação registral do imóvel e das
+                  circunstâncias específicas do caso.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq__card">
+              <summary class="faq__card-header">
+                <h3 class="faq__card-title">
+                  Posso comprar um imóvel apenas com contrato particular?
+                </h3>
+                <svg class="faq__card-icon" aria-hidden="true"><use href="#i-chevron" /></svg>
+              </summary>
+              <div class="faq__card-body">
+                <p>
+                  É possível que existam negócios realizados dessa forma, mas o
+                  contrato particular não substitui necessariamente a escritura e
+                  o registro imobiliário. Antes da aquisição, é importante
+                  analisar a situação registral e os riscos envolvidos.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq__card">
+              <summary class="faq__card-header">
+                <h3 class="faq__card-title">
+                  Quando a usucapião pode ser utilizada?
+                </h3>
+                <svg class="faq__card-icon" aria-hidden="true"><use href="#i-chevron" /></svg>
+              </summary>
+              <div class="faq__card-body">
+                <p>
+                  A usucapião pode ser uma forma de aquisição da propriedade
+                  quando determinados requisitos legais relacionados à posse e ao
+                  tempo de ocupação estão presentes. Cada situação precisa ser
+                  analisada individualmente.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq__card">
+              <summary class="faq__card-header">
+                <h3 class="faq__card-title">
+                  O que deve ser analisado antes da compra de um imóvel?
+                </h3>
+                <svg class="faq__card-icon" aria-hidden="true"><use href="#i-chevron" /></svg>
+              </summary>
+              <div class="faq__card-body">
+                <p>
+                  Entre outros pontos, podem ser relevantes a matrícula
+                  atualizada, a propriedade, eventuais gravames, ações judiciais,
+                  situação documental, regularidade da construção, certidões e as
+                  condições estabelecidas no contrato.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq__card">
+              <summary class="faq__card-header">
+                <h3 class="faq__card-title">
+                  O proprietário pode despejar um locatário que deixou de pagar o
+                  aluguel?
+                </h3>
+                <svg class="faq__card-icon" aria-hidden="true"><use href="#i-chevron" /></svg>
+              </summary>
+              <div class="faq__card-body">
+                <p>
+                  A falta de pagamento pode permitir a adoção de medidas de
+                  cobrança e, conforme a situação, o ajuizamento de ação de
+                  despejo. A estratégia depende do contrato, das garantias e das
+                  circunstâncias da locação.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq__card">
+              <summary class="faq__card-header">
+                <h3 class="faq__card-title">
+                  Problemas entre condômino e condomínio podem ser resolvidos
+                  judicialmente?
+                </h3>
+                <svg class="faq__card-icon" aria-hidden="true"><use href="#i-chevron" /></svg>
+              </summary>
+              <div class="faq__card-body">
+                <p>
+                  Sim. Questões envolvendo cobranças, assembleias, uso das áreas
+                  comuns, obras, convenção, regulamento e outros conflitos
+                  condominiais podem exigir análise jurídica e, em determinados
+                  casos, medidas judiciais.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq__card">
+              <summary class="faq__card-header">
+                <h3 class="faq__card-title">
+                  O advogado pode atuar antes de surgir um processo?
+                </h3>
+                <svg class="faq__card-icon" aria-hidden="true"><use href="#i-chevron" /></svg>
+              </summary>
+              <div class="faq__card-body">
+                <p>
+                  Sim. No Direito Imobiliário, a atuação preventiva é
+                  especialmente importante. A análise de documentos, contratos e
+                  riscos antes da realização de um negócio pode evitar conflitos
+                  e prejuízos posteriores.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq__card">
+              <summary class="faq__card-header">
+                <h3 class="faq__card-title">
+                  Como saber se o meu problema é de Direito Imobiliário?
+                </h3>
+                <svg class="faq__card-icon" aria-hidden="true"><use href="#i-chevron" /></svg>
+              </summary>
+              <div class="faq__card-body">
+                <p>
+                  Questões envolvendo compra e venda, contratos, escrituras,
+                  registros, regularização, posse, propriedade, locação,
+                  condomínios e outros conflitos relacionados a imóveis
+                  normalmente estão inseridas no Direito Imobiliário.
+                </p>
+                <p>
+                  Se houver dúvida, nossa equipe pode analisar inicialmente a
+                  situação para identificar a natureza da questão.
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== AVALIAÇÕES ====================-->
+      <section class="reviews section" id="avaliacoes">
+        <div class="reviews__container container">
+          <header class="section__header">
+            <span class="section__eyebrow">Avaliações</span>
+            <h2 class="section__title">O que nossos clientes dizem</h2>
+          </header>
+
+          <div class="reviews__grid">
+            <article class="reviews__card">
+              <div class="reviews__profile">
+                <img src="assets/img/gilson.webp" alt="" class="reviews__img" width="60" height="60" loading="lazy" />
+                <h3 class="reviews__name">Gilson Geraldo</h3>
+              </div>
+              <div class="reviews__rating" role="img" aria-label="5 de 5 estrelas">
+                <svg><use href="#i-star" /></svg><svg><use href="#i-star" /></svg><svg><use href="#i-star" /></svg><svg><use href="#i-star" /></svg><svg><use href="#i-star" /></svg>
+              </div>
+              <p class="reviews__description">
+                "Avaliação positiva: Qualidade, Valor Profissionais sérios e
+                capacitados, além de agilidade na prestação do serviço."
+              </p>
+              <div class="reviews__source">
+                <svg aria-hidden="true"><use href="#i-google" /></svg> Google Reviews
+              </div>
+            </article>
+
+            <article class="reviews__card">
+              <div class="reviews__profile">
+                <img src="assets/img/gheny.webp" alt="" class="reviews__img" width="60" height="60" loading="lazy" />
+                <h3 class="reviews__name">Gheny Sibele Beber Baldo</h3>
+              </div>
+              <div class="reviews__rating" role="img" aria-label="5 de 5 estrelas">
+                <svg><use href="#i-star" /></svg><svg><use href="#i-star" /></svg><svg><use href="#i-star" /></svg><svg><use href="#i-star" /></svg><svg><use href="#i-star" /></svg>
+              </div>
+              <p class="reviews__description">
+                "Profissionalismo excelente. Atendimento exemplar com ótimos
+                profissionais."
+              </p>
+              <div class="reviews__source">
+                <svg aria-hidden="true"><use href="#i-google" /></svg> Google Reviews
+              </div>
+            </article>
+
+            <article class="reviews__card">
+              <div class="reviews__profile">
+                <img src="assets/img/thomas.webp" alt="" class="reviews__img" width="60" height="60" loading="lazy" />
+                <h3 class="reviews__name">Thomas Andrew Wolf Gilli</h3>
+              </div>
+              <div class="reviews__rating" role="img" aria-label="5 de 5 estrelas">
+                <svg><use href="#i-star" /></svg><svg><use href="#i-star" /></svg><svg><use href="#i-star" /></svg><svg><use href="#i-star" /></svg><svg><use href="#i-star" /></svg>
+              </div>
+              <p class="reviews__description">
+                "Muito atenciosos, ágeis e sempre em contato com o cliente. Minha
+                experiência com os serviços foram muito satisfatórias, recomendo."
+              </p>
+              <div class="reviews__source">
+                <svg aria-hidden="true"><use href="#i-google" /></svg> Google Reviews
+              </div>
+            </article>
+
+            <article class="reviews__card">
+              <div class="reviews__profile">
+                <img src="assets/img/melanie.webp" alt="" class="reviews__img" width="60" height="60" loading="lazy" />
+                <h3 class="reviews__name">Melanie Wolf</h3>
+              </div>
+              <div class="reviews__rating" role="img" aria-label="5 de 5 estrelas">
+                <svg><use href="#i-star" /></svg><svg><use href="#i-star" /></svg><svg><use href="#i-star" /></svg><svg><use href="#i-star" /></svg><svg><use href="#i-star" /></svg>
+              </div>
+              <p class="reviews__description">
+                "Excelentes profissionais! Preocupados com o cliente e em resolver
+                a situação."
+              </p>
+              <div class="reviews__source">
+                <svg aria-hidden="true"><use href="#i-google" /></svg> Google Reviews
+              </div>
+            </article>
+
+            <article class="reviews__card">
+              <div class="reviews__profile">
+                <img src="assets/img/gustavo.webp" alt="" class="reviews__img" width="60" height="60" loading="lazy" />
+                <h3 class="reviews__name">Gustavo Rosar</h3>
+              </div>
+              <div class="reviews__rating" role="img" aria-label="5 de 5 estrelas">
+                <svg><use href="#i-star" /></svg><svg><use href="#i-star" /></svg><svg><use href="#i-star" /></svg><svg><use href="#i-star" /></svg><svg><use href="#i-star" /></svg>
+              </div>
+              <p class="reviews__description">
+                "Ótimos profissionais, me ajudaram muito quando precisei contratar
+                um advogado."
+              </p>
+              <div class="reviews__source">
+                <svg aria-hidden="true"><use href="#i-google" /></svg> Google Reviews
+              </div>
+            </article>
+
+            <article class="reviews__card">
+              <div class="reviews__profile">
+                <img src="assets/img/raylson.webp" alt="" class="reviews__img" width="60" height="60" loading="lazy" />
+                <h3 class="reviews__name">Raylson Abreu</h3>
+              </div>
+              <div class="reviews__rating" role="img" aria-label="5 de 5 estrelas">
+                <svg><use href="#i-star" /></svg><svg><use href="#i-star" /></svg><svg><use href="#i-star" /></svg><svg><use href="#i-star" /></svg><svg><use href="#i-star" /></svg>
+              </div>
+              <p class="reviews__description">
+                "Prestam um ótimo atendimento ao seus clientes , conduzem tudo com
+                rapidez e eficiência."
+              </p>
+              <div class="reviews__source">
+                <svg aria-hidden="true"><use href="#i-google" /></svg> Google Reviews
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== CONTATO / CTA ====================-->
+      <section class="cta" id="contato">
+        <div class="cta__container container">
+          <h2 class="cta__title">
+            Precisa de orientação jurídica sobre um imóvel ou negócio
+            imobiliário?
+          </h2>
+          <p class="cta__description">
+            Entre em contato com nossa equipe e conte brevemente sua situação.
           </p>
-          <ul class="about__values">
-            <li class="about__value">
-              <i class="bx bx-check"></i>Comprometimento
-            </li>
-            <li class="about__value"><i class="bx bx-check"></i>Experiência</li>
-            <li class="about__value"><i class="bx bx-check"></i>Ética</li>
-            <li class="about__value"><i class="bx bx-check"></i>Excelência</li>
-            <li class="about__value">
-              <i class="bx bx-check"></i>Personalização
-            </li>
-          </ul>
+          <a
+            href="https://api.whatsapp.com/send?phone=554735225124&text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20advogado%20sobre%20uma%20quest%C3%A3o%20imobili%C3%A1ria."
+            class="button button--whatsapp js-whatsapp"
+            target="_blank"
+            rel="noopener"
+          >
+            <svg class="icon"><use href="#i-whatsapp" /></svg>
+            Falar pelo WhatsApp
+          </a>
         </div>
-        <div class="about__images">
-          <img
-            src="assets/img/passigfirmino.png"
-            alt="Advogados do escritório Passig & Firmino"
-            class="about__img-big"
-          />
-        </div>
-      </div>
-    </section>
-
-    <!--==================== FAQ ====================-->
-    <section class="faq section" id="faq">
-      <div class="faq__container container">
-        <h2 class="section__title">Perguntas Frequentes</h2>
-
-        <div class="faq__content">
-          <div class="faq__card">
-            <div class="faq__card-header">
-              <h3 class="faq__card-title">
-                Quais são as opções legais disponíveis para o meu caso?
-              </h3>
-              <span class="faq__card-icon" aria-label="Expandir">+</span>
-            </div>
-            <div class="faq__card-body">
-              <p>
-                As opções legais variam dependendo da natureza da notificação
-                que você recebeu. Elas podem incluir a contestação da infração,
-                recurso administrativo ou iniciar um processo judicial para
-                anular a notificação e o processo administrativo.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq__card">
-            <div class="faq__card-header">
-              <h3 class="faq__card-title">
-                Por que contratar um advogado para me defender da notificação?
-              </h3>
-              <span class="faq__card-icon" aria-label="Expandir">+</span>
-            </div>
-            <div class="faq__card-body">
-              <p>
-                Ao contratar um advogado que atue em processos de suspensão e
-                cassação de CNH, você terá um aliado dedicado à sua defesa,
-                personalizando a estratégia de acordo com suas circunstâncias
-                únicas. Além disso, o advogado cuidará de toda a papelada e
-                cuidará dos prazos legais. Com isso, você não precisa se
-                preocupar com o recebimento e cumprimento de intimações.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq__card">
-            <div class="faq__card-header">
-              <h3 class="faq__card-title">
-                Quais são as chances de sucesso na minha defesa?
-              </h3>
-              <span class="faq__card-icon" aria-label="Expandir">+</span>
-            </div>
-            <div class="faq__card-body">
-              <p>
-                É importante ressaltar que não podemos garantir um sucesso
-                absoluto, pois cada caso é único e as decisões finais são
-                tomadas pelo órgão administrativo competente ou pelo Poder
-                Judiciário.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq__card">
-            <div class="faq__card-header">
-              <h3 class="faq__card-title">
-                O que acontece se eu não tomar uma medida imediatamente?
-              </h3>
-              <span class="faq__card-icon" aria-label="Expandir">+</span>
-            </div>
-            <div class="faq__card-body">
-              <p>
-                Não tomar medidas imediatas pode resultar em consequências mais
-                graves, como a suspensão ou cassação efetiva da CNH. Portanto, é
-                fundamental agir rapidamente e evitar maiores transtornos.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq__card">
-            <div class="faq__card-header">
-              <h3 class="faq__card-title">
-                Minha CNH foi suspensa/cassada por excesso de pontos, é possível
-                resolver?
-              </h3>
-              <span class="faq__card-icon" aria-label="Expandir">+</span>
-            </div>
-            <div class="faq__card-body">
-              <p>
-                Sim, em muitos casos é possível resolver a suspensão ou cassação
-                da CNH por excesso de pontos, geralmente por meio de recursos ou
-                outras medidas administrativas e/ou judiciais.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq__card">
-            <div class="faq__card-header">
-              <h3 class="faq__card-title">
-                Não apresentei defesa ou recurso em nenhum momento nas multas
-                aplicadas. Vocês ainda podem me ajudar?
-              </h3>
-              <span class="faq__card-icon" aria-label="Expandir">+</span>
-            </div>
-            <div class="faq__card-body">
-              <p>
-                Sim, mesmo que você não tenha apresentado defesa ou recurso
-                anteriormente, é possível tomar medidas neste momento que possam
-                te ajudar a proteger os seus direitos.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq__card">
-            <div class="faq__card-header">
-              <h3 class="faq__card-title">
-                Estou com minha CNH bloqueada por excesso de pontos, mas algumas
-                das multas não fui eu que cometi. Posso fazer algo mesmo que
-                tenha perdido o prazo de indicação de condutor ao DETRAN?
-              </h3>
-              <span class="faq__card-icon" aria-label="Expandir">+</span>
-            </div>
-            <div class="faq__card-body">
-              <p>
-                Se você perdeu o prazo para indicar o real condutor na via
-                administrativa, ainda é possível fazê-lo por meio da via
-                judicial. Fale conosco caso tenha dúvidas sobre o seu direito.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq__card">
-            <div class="faq__card-header">
-              <h3 class="faq__card-title">
-                Já estou cumprindo a penalidade da suspensão da CNH, há algo
-                para agilizar o processo de reaver meu direito de dirigir?
-              </h3>
-              <span class="faq__card-icon" aria-label="Expandir">+</span>
-            </div>
-            <div class="faq__card-body">
-              <p>
-                Sim, em alguns casos, é possível explorar opções para reduzir o
-                período de suspensão, acelerar o processo de reabilitação da CNH
-                ou até mesmo para reaver imediatamente o seu direito de dirigir.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq__card">
-            <div class="faq__card-header">
-              <h3 class="faq__card-title">
-                Quais são os prazos para recorrer após receber uma notificação
-                de suspensão ou cassação?
-              </h3>
-              <span class="faq__card-icon" aria-label="Expandir">+</span>
-            </div>
-            <div class="faq__card-body">
-              <p>
-                Os prazos podem variar de acordo com a legislação local, mas é
-                crucial tomar medidas dentro de um período específico após
-                receber a notificação. Em caso de dúvidas, procure um advogado
-                imediatamente.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq__card">
-            <div class="faq__card-header">
-              <h3 class="faq__card-title">
-                Posso recorrer da suspensão da CNH mesmo se tiver cometido a
-                infração?
-              </h3>
-              <span class="faq__card-icon" aria-label="Expandir">+</span>
-            </div>
-            <div class="faq__card-body">
-              <p>
-                Sim, mesmo se você cometeu a infração, ainda pode recorrer da
-                suspensão da CNH. A defesa para o seu caso serve para que o
-                órgão de trânsito não cometa ilegalidades e para que a sua
-                infração seja imposta de forma correta.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <script>
-      document.querySelectorAll(".faq__card-header").forEach((header) => {
-        header.addEventListener("click", () => {
-          const card = header.parentElement;
-          const body = card.querySelector(".faq__card-body");
-
-          header.classList.toggle("active");
-          body.classList.toggle("show");
-
-          if (body.classList.contains("show")) {
-            body.style.maxHeight = body.scrollHeight + "px";
-          } else {
-            body.style.maxHeight = null;
-          }
-
-          // Rotate the icon
-          const icon = header.querySelector(".faq__card-icon");
-          if (icon) {
-            icon.style.transform =
-              icon.style.transform === "rotate(180deg)"
-                ? "rotate(0deg)"
-                : "rotate(180deg)";
-          }
-        });
-      });
-    </script>
-
-    <!--==================== AVALIAÇÕES ====================-->
-    <!--==================== AVALIAÇÕES ====================-->
-    <section class="reviews section" id="reviews">
-      <div class="reviews__container container">
-        <div class="reviews__header">
-          <h2 class="section__title">O que nossos clientes dizem</h2>
-          <p class="section__subtitle">
-            Veja algumas das avaliações dos nossos clientes satisfeitos
-          </p>
-        </div>
-
-        <div class="reviews__grid">
-          <!-- ========== Review 1 =========== -->
-          <article class="reviews__card">
-            <div class="reviews__profile">
-              <img
-                src="assets/img/gilson.png"
-                alt="Foto de perfil de Gilson Geraldo"
-                class="reviews__img"
-              />
-              <h3 class="reviews__name">Gilson Geraldo</h3>
-            </div>
-            <p class="reviews__description">
-              "Avaliação positiva: Qualidade, Valor Profissionais sérios e
-              capacitados, além de agilidade na prestação do serviço."
-            </p>
-            <div class="reviews__rating">
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-            </div>
-            <div class="reviews__source">
-              <i class="bx bxl-google"></i> Google Reviews
-            </div>
-          </article>
-
-          <!-- ========== Review 2 =========== -->
-          <article class="reviews__card">
-            <div class="reviews__profile">
-              <img
-                src="assets/img/gheny.png"
-                alt="Foto de perfil de Gheny Sibele Beber Baldo"
-                class="reviews__img"
-              />
-              <h3 class="reviews__name">Gheny Sibele Beber Baldo</h3>
-            </div>
-            <p class="reviews__description">
-              "Profissionalismo excelente. Atendimento exemplar com ótimos
-              profissionais."
-            </p>
-            <div class="reviews__rating">
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-            </div>
-            <div class="reviews__source">
-              <i class="bx bxl-google"></i> Google Reviews
-            </div>
-          </article>
-
-          <!-- ========== Review 3 =========== -->
-          <article class="reviews__card">
-            <div class="reviews__profile">
-              <img
-                src="assets/img/thomas.png"
-                alt="Foto de perfil de Thomas Andrew Wolf Gilli"
-                class="reviews__img"
-              />
-              <h3 class="reviews__name">Thomas Andrew Wolf Gilli</h3>
-            </div>
-            <p class="reviews__description">
-              "Muito atenciosos, ágeis e sempre em contato com o cliente. Minha
-              experiência com os serviços foram muito satisfatórias, recomendo."
-            </p>
-            <div class="reviews__rating">
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-            </div>
-            <div class="reviews__source">
-              <i class="bx bxl-google"></i> Google Reviews
-            </div>
-          </article>
-
-          <!-- ========== Review 4 =========== -->
-          <article class="reviews__card">
-            <div class="reviews__profile">
-              <img
-                src="assets/img/melanie.png"
-                alt="Foto de perfil de Melanie Wolf"
-                class="reviews__img"
-              />
-              <h3 class="reviews__name">Melanie Wolf</h3>
-            </div>
-            <p class="reviews__description">
-              "Excelentes profissionais! Preocupados com o cliente e em resolver
-              a situação."
-            </p>
-            <div class="reviews__rating">
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-            </div>
-            <div class="reviews__source">
-              <i class="bx bxl-google"></i> Google Reviews
-            </div>
-          </article>
-
-          <!-- ========== Review 5 =========== -->
-          <article class="reviews__card">
-            <div class="reviews__profile">
-              <img
-                src="assets/img/gustavo.png"
-                alt="Foto de perfil de Gustavo Rosar"
-                class="reviews__img"
-              />
-              <h3 class="reviews__name">Gustavo Rosar</h3>
-            </div>
-            <p class="reviews__description">
-              "Ótimos profissionais, me ajudaram muito quando precisei contratar
-              um advogado."
-            </p>
-            <div class="reviews__rating">
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-            </div>
-            <div class="reviews__source">
-              <i class="bx bxl-google"></i> Google Reviews
-            </div>
-          </article>
-
-          <!-- ========== Review 6 =========== -->
-          <article class="reviews__card">
-            <div class="reviews__profile">
-              <img
-                src="assets/img/raylson.png"
-                alt="Foto de perfil de Raylson Abreu"
-                class="reviews__img"
-              />
-              <h3 class="reviews__name">Raylson Abreu</h3>
-            </div>
-            <p class="reviews__description">
-              "Prestam um ótimo atendimento ao seus clientes , conduzem tudo com
-              rapidez e eficiência."
-            </p>
-            <div class="reviews__rating">
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-            </div>
-            <div class="reviews__source">
-              <i class="bx bxl-google"></i> Google Reviews
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <!--==================== FOOTER ====================-->
     <footer class="footer">
       <div class="footer__container container">
-        <h1 class="footer__title">Passig & Firmino Advogados.</h1>
-
-        <div class="footer__content grid">
-          <div class="footer__data">
-            <img src="assets/img/favicon2.png" alt="Logotipo PF Advocacia" />
+        <div class="footer__brand">
+          <img src="assets/img/favicon2.png" alt="" width="56" height="56" loading="lazy" />
+          <div>
+            <p class="footer__title">Passig & Firmino Advogados</p>
+            <p class="footer__tagline">Direito Imobiliário</p>
           </div>
+        </div>
 
+        <div class="footer__content">
           <div class="footer__data">
-            <h2 class="footer__subtitle">Endereço</h2>
-            <p class="footer__information">
+            <h3 class="footer__subtitle">Endereço</h3>
+            <address class="footer__information">
               R. Dom Bosco, 701 - Sala 102 - Centro <br />
               Rio do Sul, Santa Catarina, Brasil
-              <img
-                src="assets/img/brazilflag.png"
-                alt="Bandeira do Brasil"
-                class="footer__flag"
-              />
-            </p>
+              <img src="assets/img/flag.png" alt="" class="footer__flag" width="16" height="16" loading="lazy" />
+            </address>
           </div>
 
           <div class="footer__data">
-            <h2 class="footer__subtitle">Contatos</h2>
+            <h3 class="footer__subtitle">Contatos</h3>
             <p class="footer__information">
-              (47) 3522-5124 <br />
-              bpfadvocacia@gmail.com
+              <a href="tel:+554735225124">(47) 3522-5124</a> <br />
+              <a href="mailto:bpfadvocacia@gmail.com">bpfadvocacia@gmail.com</a>
             </p>
           </div>
 
           <div class="footer__data">
-            <h2 class="footer__subtitle">Escritório</h2>
+            <h3 class="footer__subtitle">Escritório</h3>
             <p class="footer__information">
               Atendimento de Segunda à Sexta,<br />
               das 08:30 às 12:00 e das 13:30 às 18:30
@@ -668,24 +747,26 @@
         </div>
 
         <div class="footer__group">
-          <ul class="footer__social">
+          <div class="footer__social">
             <a
               href="https://www.facebook.com/bpfadvogados/"
               target="_blank"
+              rel="noopener"
               class="footer__social-link"
               aria-label="Facebook"
             >
-              <i class="bx bxl-facebook"></i>
+              <svg class="icon"><use href="#i-facebook" /></svg>
             </a>
             <a
               href="https://www.instagram.com/passigfirminoadvogados/"
               target="_blank"
+              rel="noopener"
               class="footer__social-link"
               aria-label="Instagram"
             >
-              <i class="bx bxl-instagram"></i>
+              <svg class="icon"><use href="#i-instagram" /></svg>
             </a>
-          </ul>
+          </div>
 
           <span class="footer__copy">
             &#169; Von. Todos os direitos reservados
@@ -696,23 +777,23 @@
 
     <!-- Botão fixo de WhatsApp -->
     <a
-      href="https://api.whatsapp.com/send?phone=554735225124&text=Ol%C3%A1!%20Gostaria%20de%20conversar%20com%20um%20Advogado%20sobre%20minha%20notifica%C3%A7%C3%A3o%20de%20tr%C3%A2nsito"
-      class="whatsapp-button"
-      id="whatsapp-button"
+      href="https://api.whatsapp.com/send?phone=554735225124&text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20advogado%20sobre%20uma%20quest%C3%A3o%20imobili%C3%A1ria."
+      class="whatsapp-button js-whatsapp"
       target="_blank"
-      aria-label="Abrir conversa no WhatsApp com um advogado"
+      rel="noopener"
+      aria-label="Falar com um advogado pelo WhatsApp"
     >
-      <i class="bx bxl-whatsapp"></i> Desejo falar com um advogado
+      <svg class="icon"><use href="#i-whatsapp" /></svg>
+      <span>Falar com um advogado</span>
     </a>
 
     <!--========== SCROLL UP ==========-->
-    <a href="#" class="scrollup" id="scroll-up" aria-label="Voltar ao topo">
-      <i class="bx bx-up-arrow-alt"></i>
+    <a href="#home" class="scrollup" id="scroll-up" aria-label="Voltar ao topo">
+      <svg class="icon"><use href="#i-arrow-up" /></svg>
     </a>
 
     <!--=============== SCRIPTS ===============-->
-    <script src="assets/js/mixitup.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js" defer></script>
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=AW-395923033"
@@ -723,29 +804,7 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "AW-395923033");
-    </script>
-
-    <script>
-      gtag("event", "conversion", {
-        send_to: "AW-395923033/ZiSbCILypokZENmc5bwB",
-      });
-    </script>
-
-    <script>
-      function gtag_report_conversion(url) {
-        var callback = function () {
-          if (typeof url != "undefined") {
-            window.location = url;
-          }
-        };
-        gtag("event", "conversion", {
-          send_to: "AW-395923033/ZiSbCILypokZENmc5bwB",
-          event_callback: callback,
-        });
-        return false;
-      }
     </script>
   </body>
 </html>
